@@ -7,7 +7,7 @@ categories:
     - Blog
 
 tags:
-    -[Blog, study, ML]
+    - [Blog, study, ML]
 
 toc: true
 toc_sticky: true
