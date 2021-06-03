@@ -3,8 +3,10 @@ excerpt : "md 파일만들기"
 
 categories:
     - Blog
+
 tags:
-    -[Blog, jekyll, Github]
+    -[Blog, study, ML]
+
 toc: true
 toc_sticky: true
 date: 2021-06-03
