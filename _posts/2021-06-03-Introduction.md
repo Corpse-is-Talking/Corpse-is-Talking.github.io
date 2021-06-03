@@ -1,3 +1,4 @@
+---
 title: "공부를 위한 github블로그 만들기"
 
 excerpt : "md 파일만들기 test"
