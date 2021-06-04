@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "dark", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -22,8 +22,8 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "JJH"
 description              : "Studying"
 url                      : "https://corpse-is-talking.github.io/"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl                  : ""
+repository               :  "corpse-is-talking/corpse-is-talking"
 teaser                   : "/assets/images/500x300.PNG"
 logo                     : "/assets/images/Chitanda.JPG"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title

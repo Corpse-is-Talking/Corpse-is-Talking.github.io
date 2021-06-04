@@ -1,7 +1,10 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Study IE"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/studyie/
+    children:
+      - title: "Machine Learning Theory"
+        url: /docs/mltheory/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
