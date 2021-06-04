@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Study IE"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/studyie/
+    url: https://corpse-is-talking.github.io/minimal-mistakes/docs/studyie/
     children:
       - title: "Machine Learning Theory"
         url: /docs/mltheory/
