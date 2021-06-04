@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "For study"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Makima"
+name                     : "JJH"
 description              : "Studying"
 url                      : "https://corpse-is-talking.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Makima"
+  name             : "JJH"
   avatar           : "/assets/images/Makima.JPG"
   bio              : "Corpse is talking"
   location         : "Korea, Republic of"
