@@ -1,10 +1,7 @@
 # main links
 main:
-  - title: "Study IE"
-    url: https://corpse-is-talking.github.io/minimal-mistakes/docs/studyie/
-    children:
-    - title: "Machinelearningtheory"
-      url:/docs/mltheory/
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -13,5 +10,3 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-sidebar:
-  nav:"docs"
