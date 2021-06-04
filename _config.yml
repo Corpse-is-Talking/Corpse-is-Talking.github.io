@@ -118,7 +118,12 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-
+# Sidebar
+sidebar:
+  -title:"StudyIE"
+  -image:"images/Chitanda.jpg"
+  -image_alt: "image"
+  -text: "Studying IE,ML"
 # Site Footer
 footer:
   links:
