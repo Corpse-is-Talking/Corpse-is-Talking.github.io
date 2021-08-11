@@ -7,8 +7,8 @@ tags:
   - python
   - Industrial Engineering
   - Blog
-comments: true
 use_math: true
+comments: true
 ---
 
 ## 0. Introduction
