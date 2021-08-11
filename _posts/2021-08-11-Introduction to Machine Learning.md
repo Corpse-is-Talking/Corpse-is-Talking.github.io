@@ -1,7 +1,7 @@
 ---
-title: "Introduction to Machine Learning, 머신러닝 공부"
+title: "Introduction to Machine Learning"
 categories:
-  - Machine Learning
+  - Machine Learning 공부
 tags:
   - ML
   - python
