@@ -40,14 +40,15 @@ comments: true
 
 ## 2. Formulating Problem
 
-ML문제의 대부분은 다음과 같은 순서로 해결하게 된다.
+일반적인 ML문제의 대부분은 다음과 같은 순서로 해결하게 된다.
 ##### 1. Input data를 관측한다.
 ##### 2. Action을 취한다.
 ##### 3. 실제 결과 Y를 확인한다.
 ##### 4. 함수 $l(A,Y)$ 를 통해 도출된 결과 A(Outcome)와 실제 데이터 Y 의 오차를 수치화한다. ($i.e$, Square loss function)
 
 
-### Definitions
+## Definitions
+
 __Input Space: $X$__ , 주어지는 데이터들의 집합
 
 __Action Space: $A$__ , 수행한 Action을 통해 도출된 결과들의 집합
