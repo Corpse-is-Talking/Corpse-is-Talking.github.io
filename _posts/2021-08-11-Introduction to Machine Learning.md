@@ -7,6 +7,7 @@ tags:
   - python
   - Industrial Engineering
   - Blog
+  
 use_math: true
 comments: true
 ---
