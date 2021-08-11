@@ -48,7 +48,9 @@ ML문제의 대부분은 다음과 같은 순서로 해결하게 된다.
 
 ### Definitions
 __Input Space: $X$__ , 주어지는 데이터들의 집합
+
 __Action Space: $A$__ , 수행한 Action을 통해 도출된 결과들의 집합
+
 __Outcome Space: $Y$__ , 결과들의 집합
 
 __Decision Function__ : $x \in X$을 받아서 action $a \in A$를 수행하는 함수 
