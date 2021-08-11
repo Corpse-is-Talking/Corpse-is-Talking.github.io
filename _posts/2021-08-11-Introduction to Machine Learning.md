@@ -58,7 +58,7 @@ __Loss Function__ : 실제결과값 Y와 action을 통해 도출된 결과 값 �
 
 -  $L$: $A \times Y \rightarrow $ __$R$__ , $(a,y)\rightarrow l(a,y) $
 
-##Example
+## Example
 
 #### Linear Regression(선형회귀문제):
 __d__ 개의 __feature__(특징) 을 가진 __Input X를__  선형회귀를 통해  결과 __Y__ 를 도출한다고 해보자.
