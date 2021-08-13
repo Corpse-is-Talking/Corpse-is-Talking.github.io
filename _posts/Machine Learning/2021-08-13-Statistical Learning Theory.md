@@ -1,5 +1,5 @@
 ---
-title: "1. Statistical Learning Theory"
+title: "2. Statistical Learning Theory"
 categories:
   - MachineLearning
 tags:
