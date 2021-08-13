@@ -1,5 +1,5 @@
 ---
-title: "머신러닝"
+title: "알고리즘"
 layout: archive
 permalink: categories/Algorithm
 author_profile: true
