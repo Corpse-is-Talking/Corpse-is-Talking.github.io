@@ -59,8 +59,11 @@ comments: true
   $$R_n(f)=\frac{1}{n}\sum_{i=1}^{n} l(f(x_i,y)) $$
 
 
-  이고 큰수의 법칙에 의해서 뽑은 데이터 수가 많을수록, $R_n(f)$ 는 $P_{X \times Y}$의 실제 리스크 $R(f)$로 수렴하게 되고, ($\underset{n\rightarrow \infty}{\operatorname{lim}} R_n(f)=R(f)$  ) 이 때의 $R_n(f)$를 __Empirical Risk__ 라고 한다. 
-  __즉, 우리는 데이터 수가 많을 때, $R_n(f)$를  $R(f)$로 생각해도 되고, 실제 $P$가 어떤 분포인지 몰라도 $R(f)$를 구할  수 있다는 것이다..__
+  여기서 큰수의 법칙을 적용해보면 
+  $$\underset{n\rightarrow \infty}{\operatorname{lim}} R_n(f)=R(f)$$ 
+  
+  즉, 데이터수 $n$이 많을 수록 $R_n(f)$ 는 $P_{X \times Y}$의 실제 리스크 $R(f)$로 수렴하게 되고, 이 때의 $R_n(f)$를 __Empirical Risk__ 라고 한다. 
+  __요약하자면, 우리는 데이터 수가 많을 때, $R_n(f)$를  $R(f)$로 생각해도 되고, 실제 $P$가 어떤 분포인지 몰라도 $R(f)$를 구할  수 있다는 것이다..__
 
 - #### Empirical Risk Minimizer
 
