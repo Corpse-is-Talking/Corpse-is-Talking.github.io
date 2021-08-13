@@ -28,7 +28,8 @@ comments: true
   라고 쓸 수 있다. 하지만 우리는 $ P_{ X\times Y } $ 가 무엇인지 모르기 때문에 정확한 기대값을 계산할 수 없지만, 예측은 할 수 있다.
 
 - #### Bayes Decison Function.
-  __Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves minimal risk among all possible function.
+  __Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves __minimal risk__ among all possible function.
+
   즉, Decision function 중에서 리스크를 <span style="color:red">최소화</span>하는 함수를 베이지안 결정함수라고 한다는 것이다.
   이를 수학적으로 나타내보면, Bayes decision function $$f^*$$는
 
