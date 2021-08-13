@@ -1,5 +1,5 @@
 ---
-title: "1. Introduction to Machine Learning"
+title: "0. Introduction to Machine Learning"
 categories:
   - MachineLearning
 tags:
