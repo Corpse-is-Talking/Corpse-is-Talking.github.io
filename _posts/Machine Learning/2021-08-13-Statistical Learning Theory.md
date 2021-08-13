@@ -17,26 +17,26 @@ comments: true
 
 ## 1. Setting
 - #### Risk
-데이터$(x,y)$를 독립적으로$(i.i.d)$ 랜덤하게 생성하는 분포 __$ P_{ X\times Y } $__ 가 있다고 하자. 우리는 데이터에대해서 일반적으로 loss function을 작게 해주는 $f$를 구하고 싶을 것이다. 이를 조금더 공식화해보자.
-$P_{ X\times Y }$에서 추출한 데이터 $(x,y)$ 에대하여 decision function $f$를 이용해 구한 loss function의 기대값을 $R$이라고 하면, 
+  데이터$(x,y)$를 독립적으로$(i.i.d)$ 랜덤하게 생성하는 분포 __$ P_{ X\times Y } $__ 가 있다고 하자. 우리는 데이터에대해서 일반적으로 loss function을 작게 해주는 $f$를 구하고 싶을 것이다. 이를 조금더 공식화해보자.
+  $P_{ X\times Y }$에서 추출한 데이터 $(x,y)$ 에대하여 decision function $f$를 이용해 구한 loss function의 기대값을 $R$이라고 하면, 
 
 
 
-$$R(f) = E [l(f(x),y)]$$
+  $$R(f) = E [l(f(x),y)]$$
 
 
-라고 쓸 수 있다. 하지만 우리는 $ P_{ X\times Y } $ 가 무엇인지 모르기 때문에 정확한 기대값을 계산할 수 없지만, 예측은 할 수 있다.
+  라고 쓸 수 있다. 하지만 우리는 $ P_{ X\times Y } $ 가 무엇인지 모르기 때문에 정확한 기대값을 계산할 수 없지만, 예측은 할 수 있다.
 
 - #### Bayes Decison Function.
-__Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves minimal risk among all possible function.
-즉, Decision function 중에서 리스크를 <span style="color:red">최소화</span>하는 함수를 베이지안 결정함수라고 한다는 것이다.
-이를 수학적으로 나타내보면, Bayes decision function $$f^*$$는
+  __Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves minimal risk among all possible function.
+  즉, Decision function 중에서 리스크를 <span style="color:red">최소화</span>하는 함수를 베이지안 결정함수라고 한다는 것이다.
+  이를 수학적으로 나타내보면, Bayes decision function $$f^*$$는
 
 
-$$f^*=\underset{f}{\operatorname{argmin}} R(f)$$
+  $$f^*=\underset{f}{\operatorname{argmin}} R(f)$$
 
 
-추가로, Decision function이 $f^*$(bayes decision function)일 때의 리스크 $R$을 __Bayes Risk__ 라고 한다.
+  추가로, Decision function이 $f^*$(bayes decision function)일 때의 리스크 $R$을 __Bayes Risk__ 라고 한다.
 
 ## 2. Empirical Risk Minimizer.
 앞서말했듯이 $P_{X \times Y}$를 모르기 때문에, 정확한 $R(f)$ 를 구할 수 없다. 하지만, 주어진 데이터가 많은경우 우리는 이 리스크를 예측 할 수 있게된다.
