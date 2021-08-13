@@ -43,15 +43,15 @@ comments: true
 앞서말했듯이 $P_{X \times Y}$를 모르기 때문에, 정확한 $R(f)$ 를 구할 수 없다. 하지만, 주어진 데이터가 많은경우 우리는 이 리스크를 예측 할 수 있게된다.
 
 - ####  Strong Law of Large number.
-  평균이 $m$인 분포 $z$ 로부터 $i.i.d$하게 $z_1, z_2,...z_n$ 을 추출했다고 하면, 
+  기대값이 $m$인 분포 $z$ 로부터 $i.i.d$하게 $z_1, z_2,...z_n$ 을 추출했다고 하면, 
 
 
-  $$\underset{n\rightarrow \infty}{\operatorname{lim}} \sum_{n=1}^{\infty} z_i = m$$
+  $$\underset{n\rightarrow \infty}{\operatorname{lim}} \frac{1}{n}\sum_{n=1}^{\infty} z_i = m $$
 
 
-  을 만족하고, 이를 큰 수 의 법칙이라고 한다.
+  을 1의 확률로(Almost Surely)만족하고, 이를 큰 수 의 법칙이라고 한다.
   즉, 특정 분포를 가진 모집단으로부터 데이터를 뽑는 경우에, 데이터를 많이 뽑을수록  표본평균은 모집단의 평균에 수렴한다는 것이다.
-  증명은 [여기](https://www.youtube.com/watch?v=Yh5bR7X3ch8) 를 참고하면 좋을 것같다. 
+  증명은 [여기](https://www.youtube.com/watch?v=Yh5bR7X3ch8) 를 참고하면 좋을 것같다. (사실 영상은 Weak law of Large number에 대한 증명이지만, insight를 얻기에는 충분하다고 생각한다.. Strong Law of Large number의 명확한 증명은 필자의 수학실력으로는 아직 이해하기 무리인 것 같다.)
 
 - #### Empirical Risk
   $P_{X \times Y}$ 에서 뽑은 $i.i.d$ 한 $n$개의 데이터셋을 $D_n =((x_1,y_1),...,(x_n,y_n))$이라고 하자.Decision function $f$에 대하여 뽑은 $n$개의 데이터셋의 평균을 $R_n(f)$이라고 하면,
