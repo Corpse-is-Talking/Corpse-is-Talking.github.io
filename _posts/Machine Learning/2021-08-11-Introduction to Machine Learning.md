@@ -1,5 +1,5 @@
 ---
-title: "0. Introduction to Machine Learning"
+title: "1. Introduction to Machine Learning"
 categories:
   - MachineLearning
 tags:
@@ -7,7 +7,7 @@ tags:
   - python
   - Industrial Engineering
   - Blog
-
+excerpt: Introduction to Machine Learning..
 use_math: true
 comments: true
 

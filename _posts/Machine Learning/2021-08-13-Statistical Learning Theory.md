@@ -7,7 +7,7 @@ tags:
   - python
   - Industrial Engineering
   - Blog
-
+excerpt: Statistical Learning Theory and Empirical Risk Minimizer..
 use_math: true
 comments: true
 
