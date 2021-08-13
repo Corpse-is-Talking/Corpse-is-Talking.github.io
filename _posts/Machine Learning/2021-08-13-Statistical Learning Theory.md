@@ -1,5 +1,5 @@
 ---
-title: "2. Statistical Learning Theory"
+title: "1. Statistical Learning Theory"
 categories:
   - MachineLearning
 tags:
@@ -29,7 +29,7 @@ $$R(f) = E [l(f(x),y)]$$
 - #### Bayes Decison Function.
 __Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves minimal risk among all possible function.
 즉, Decision function 중에서 리스크를 <span style="color:red">최소화</span>하는 함수를 베이지안 결정함수라고 한다는 것이다.
-이를 수학적으로 나타내보면, Bayes decision function $f^*$는
+이를 수학적으로 나타내보면, Bayes decision function $$f^*$$는
 
 
  $$f^*=\underset{f}{\operatorname{argmin}} R(f)$$
