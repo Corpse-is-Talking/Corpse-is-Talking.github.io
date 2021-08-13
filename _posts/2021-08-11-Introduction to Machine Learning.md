@@ -62,6 +62,7 @@ __Loss Function__ : 실제결과값 Y와 action을 통해 도출된 결과 값 �
 
 -  $L$: $A \times Y \rightarrow $ __$R$__ , $(a,y)\rightarrow l(a,y) $
 
+
 ## Example
 
 #### Linear Regression(선형회귀문제):
@@ -70,6 +71,9 @@ __d__ 개의 __feature__(특징) 을 가진 __Input X를__  선형회귀를 통�
 - __Input Space: $R^d$__ (feature이 d개이므로 d개의 feature에관한 정보가 모두 필요하다.)
 - __Outcome Space: $R$__ (예측하고싶은 실제 값)
 - __Action Space: $R$__ (선형회귀 문제는 특정 데이터가 어떤값(R)을 가질 지 예측할때 사용한다)
+
+`Loss function L은 한번의 action을 평가한다 즉, 현재 coefficent 로 그 action을 수행했을때의 결과값이 주어지고, 우리는 다양한 방법을 이용해 coefficents를 loss function을 줄일 수 있도록 하면 된다.`
+
 
 #### Logistic Regression(로지스틱 회귀문제)
 __d__ 개의 __feature__ 을 가진 __Input X를__  로지스틱회귀를 통해  결과 __Y__ 를 도출한다고 해보자.
