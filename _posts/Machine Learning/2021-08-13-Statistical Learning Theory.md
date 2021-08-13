@@ -21,6 +21,7 @@ comments: true
 $P_{ X\times Y }$에서 추출한 데이터 $(x,y)$ 에대하여 decision function $f$를 이용해 구한 loss function의 기대값을 $R$이라고 하면, 
 
 
+
 $$R(f) = E [l(f(x),y)]$$
 
 
@@ -56,6 +57,7 @@ $P_{X \times Y}$ 에서 뽑은 $i.i.d$ 한 $n$개의 데이터셋을 $D_n =((x_1
 
 
 $R_n(f)=\frac{1}{n}\sum_{i=1}^{n} l(f(x_i,y)) $
+
 
 
 이고 큰수의 법칙에 의해서 뽑은 데이터 수가 많을수록, $R_n(f)$ 는 $P_{X \times Y}$의 실제 리스크 $R(f)$로 수렴하게 되고, ($\underset{n\rightarrow \infty}{\operatorname{lim}} R_n(f)=R(f)$  ) 이 때의 $R_n(f)$를 __Empirical Risk__ 라고 한다. 
