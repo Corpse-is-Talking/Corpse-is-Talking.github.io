@@ -1,7 +1,7 @@
 ---
 title: "1. Introduction to Machine Learning"
 categories:
-  - Machine Learning
+  - MachineLearning
 tags:
   - ML
   - python
