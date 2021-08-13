@@ -61,6 +61,8 @@ comments: true
 
 
   여기서 큰수의 법칙을 적용해보면 
+
+  
   $$\underset{n\rightarrow \infty}{\operatorname{lim}} R_n(f)=R(f)$$ 
   
   즉, 데이터수 $n$이 많을 수록 $R_n(f)$ 는 $P_{X \times Y}$의 실제 리스크 $R(f)$로 수렴하게 되고, 이 때의 $R_n(f)$를 __Empirical Risk__ 라고 한다. 
