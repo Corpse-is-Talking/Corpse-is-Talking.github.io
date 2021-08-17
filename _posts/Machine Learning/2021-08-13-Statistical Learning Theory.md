@@ -25,7 +25,7 @@ comments: true
   $$R(f) = E [l(f(x),y)]$$
 
 
-  라고 쓸 수 있다. 하지만 우리는 $ P_{ X\times Y } $ 가 무엇인지 모르기 때문에 정확한 기대값을 계산할 수 없지만, 예측은 할 수 있다.
+  라고 쓸 수 있다. 하지만 우리는 $ P_{ X\times Y } $ 가 무엇인지 모르기 때문에 정확한 기대값을 계산할 수 없다. 하지만, 우리는 통계적인 방법을 이용해서 기댓값을 예측을 할수 있게 된다.
 
 - #### Bayes Decison Function.
   __Bayes decision function:__  $$f^*:X \rightarrow A $$ is a function that achieves __minimal risk__ among all possible function.
@@ -74,6 +74,6 @@ comments: true
 
 
   $$ f^*=\underset{f}{\operatorname{argmin}} \, R_n(f)$$
-
+  
 
 
