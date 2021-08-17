@@ -287,3 +287,4 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+disqus_shortname: 'Corpse-is-talking'
