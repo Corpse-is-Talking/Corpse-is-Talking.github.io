@@ -63,20 +63,22 @@ comments: true
 
   증명을 위해서 햇갈릴 만한 개념 세가지만 짚고 넘어가자  
 
-  1. $E[y|x]$ 는
-   $x$ 에 관한 함수이다.
+  1. $$E[y|x] 는
+   x 에 관한 함수이다.$$
 
-  2. $E[E[y|x]]=E[y]$  이다. (Law of Iterated Expectaion.)
+  2. $$E[E[y|x]]=E[y]  이다. (Law\, of\, Iterated Expectaion.)$$
   
-  3. $E[g(x)Y|X=x]=g(x) \times E[Y|X=x]$ 
-  ($g(x)$ 를 상수취급 가능 )
+  3. $$E[g(x)Y|X=x]=g(x) \times E[Y|X=x]
+  (g(x) 를\, 상수\,취급가능 )$$
 
 
   잘 와닿지 않는다면, [여기](https://www.youtube.com/watch?v=yDkm9AYaczk)를 참고해보자.
   
 
 
-  $ g(x)=E[y|x] $   라고 하자. 문제를 다시써보면
+  $g(x)=E[y|x]$   라고 하자. 문제를 다시써보면
+
+
 
   $$
   \begin{aligned}
@@ -109,11 +111,13 @@ comments: true
   $$ E[f^*(x-y)^2|x] <=E[(f(x)-y)^2|x] $$
 
 
-  가 성립하고, $E[(f^* (x)-y)^2]=E[E[(f^* (x)-y)^2|x]]$  이므로(Law of Iterated Expectation), 
-  $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx  \geq \int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
+  가 성립하고, $$E[(f^* (x)-y)^2]=E[E[(f^* (x)-y)^2|x]]$$  이므로(Law of Iterated Expectation),
 
-  이된다.
-  따라서, Bayesian Decison Function $ f^*=E[y|x] $ 가 된다.
+
+  $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx\geq\int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
+
+
+  따라서, Bayesian Decison Function $f^*=E[y|x]$ 가 된다.
 
 
 
