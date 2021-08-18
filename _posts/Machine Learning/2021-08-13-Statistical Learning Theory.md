@@ -97,11 +97,11 @@ comments: true
 
   증명을 위해서 햇갈릴 만한 개념 세가지만 짚고 넘어가자  
 
-  - $ E[y|x] $ 는 $x$ 에 관한 함수이다.
+  - $E[y|x]$ 는 $x$ 에 관한 함수이다.
 
-  - $ E[E[y|x]] = E[y] $ 이다. (Law of Iterated Expectaion.)
+  - $E[E[y|x]] = E[y]$ 이다. (Law of Iterated Expectaion.)
   
-  - ${E[g(x)Y|X=x]=g(x)\times E[Y|X=x]}$ ($g(x)$ 를 상수취급 가능
+  - $E[g(x)Y|X=x]=g(x)\times E[Y|X=x]$ ( $g(x)$ 를 상수취급 가능 )
 
 
   잘 와닿지 않는다면, [여기](https://www.youtube.com/watch?v=yDkm9AYaczk)를 참고해보자.
