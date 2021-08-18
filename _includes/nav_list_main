@@ -30,21 +30,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Living</span>
-            <ul>
-                {% for category in site. categories %}
-                    {% if category[0]=="Travel"%}
-                        <li><a href="/categories/Travel" class="">여행 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site. categories %}
-                    {% if category[0]=="AnimeManga"%}
-                        <li><a href="/categories/AnimeManga" class="">만화/아니메 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
       </li>
   </ul>
 </nav>
