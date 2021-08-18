@@ -75,5 +75,60 @@ comments: true
 
   $$ f^*=\underset{f}{\operatorname{argmin}} \, R_n(f)$$
   
+- ## 3. Examples
+
+- #### Least Square Regression.
+  Loss function $l(a-y)=(a-y)^2$ 으로 정의된다고 하자. 
+  이 경우 우리는 가장 최적의 decision function $ f^* $ ,즉 Empirical Risk Minimizer 을 찾아야한다.
+  $f$ 에관한 함수 $R(f) =E[(f(x)-y)^2]$에대해서, $R(f)$를 최소화하는 $f$를 찾아보자.
+  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 수식으로 표현해보면,
+
+
+
+  $$
+  \begin{aligned}
+  E[(f(x)-y)^2|x]&=E[(f(x)-E[y|x]+E[y|x]-y)^2|x] \\
+  &=E[(f(x)-E[y|x])^2|x]+E[(E[y|x]-y)^2|x]+2E[(f(x)-E[y|x])(E[y|x]-y)|x] \\
+  \end{aligned}
+  $$
+  여기서 햇갈릴 만한 것을 잠깐 짚고 넘어가자면,  $E[y|x]$ 는 $x$ 에 관한 함수이고 , $E[E[y|x]] = E[y]$ 이다. 더해서, $\textcolor{red}{E[g(x)Y|X=x]=g(x)\times E[Y|X=x]} $
+  잘 와닿지 않는다면, [여기](https://www.youtube.com/watch?v=yDkm9AYaczk)를 참고해보자.
+  $E[y|x]$를 $x$에 관한함수 $g(x)$로 생각해보자. $g(x)=E[y|x]$ 문제를 다시써보면
+
+  $$
+  \begin{aligned}
+  E[(f(x)-y)^2|x]&=E[(f(x)-E[y|x]+E[y|x]-y)^2|x] \\
+  &=E[(f(x)-g(x))^2|x]+\textcolor{blue}{E[(g(x)-y)^2|x]}+\textcolor{red}{2E[(f(x)-g(x))(g(x)-y)|x]} \\
+  \end{aligned}
+  $$
+
+  여기서 빨갛게 칠한 부분을 보자. $(f(x)-g(x))$ 는 위에서 말했듯이 상수취급해줄 수 있고,
+  그렇게 된다면 남는건, $E[(g(x)-y)|x]$인데, 이를 정리하면,
+  
+  $$
+  \begin{aligned}
+  E[(g(x)-y)|x]&=E[g(x)|x]-E[y|x]\\
+  &=g(x)-E[y|x] \\
+  &= E[y|x]-E[y|x](앞서서, g(x)=E[y|x]로 정의했다.) \\
+  &=0
+  \end{aligned}
+  $$
+
+  따라서, 빨갛게 칠한 부분은 0이되고, 
+  $$E[(f(x)-y)^2|x]=E[(f(x)-g(x))^2|x]+\textcolor{blue}{E[(g(x)-y)^2|x]}$$ 
+  이렇게 쓸 수 있다.  
+
+  다시 위에수식으로 돌아가 이번엔 파란글씨부분을 살펴보자, 
+  우리가 최소화하고자하는 함수 $E[(f(x)-y)^2|x]$는 $f$에 관한 함수이며,  $E[(g(x)-y)^2|x]$ 는 $f$에관한 항이 하나도 없으므로, 상수로 생각할 수 있다.  결국 $E[(f(x)-y)^2|x]$ 를 최소화하기 위해서는, $E[(f(x)-g(x))^2|x]$ 을 최소화 하는것이랑 같고,이를 최소화하기 위해서 $f=g(x)$, 이어야하고, $f^*=E[y|x]$ 이된다.
+  하지만, 우리는 각각의 데이터 $x$일때의 $f^*$을 구한것이지, 모든 데이터에 대하여 성립하는 $f^*$을 구한것은 아니다. 이를 조금만 더 일반화 시켜보면, 모든 x에관해서, 
+
+  $$ E[f^*(x-y)^2|x] <=E[(f(x)-y)^2|x] $$
+  가 성립하고, $E[f^*(x-y)^2]=E[E[f^*(x-y)^2|x]] $ 이므로, 
+  $f^*$가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
+
+
+
+
+
 
 
