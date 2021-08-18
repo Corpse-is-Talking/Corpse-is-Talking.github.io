@@ -109,8 +109,8 @@ comments: true
   $$ E[f^*(x-y)^2|x] <=E[(f(x)-y)^2|x] $$
 
 
-  가 성립하고, $E[f^* (x-y)^2]=E[E[f^* (x-y)^2|x]]$  이므로(Law of Iterated Expectation), 
-  $$ E[(f(x)-y)^2] \geq \int\limits E[f^* (x-y)^2|x] P(X=x)dx$$
+  가 성립하고, $E[(f^* (x)-y)^2]=E[E[(f^* (x)-y)^2|x]]$  이므로(Law of Iterated Expectation), 
+  $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx  \geq \int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
 
   이된다.
   따라서, Bayesian Decison Function $ f^*=E[y|x] $ 가 된다.
@@ -122,7 +122,7 @@ comments: true
 
 
 ## 3. Empirical Risk Minimizer.
-앞서말했듯이 $P_{X \times Y}$를 모르기 때문에, 정확한 $R(f)$ 를 구할 수 없다. 하지만, 주어진 데이터가 많은경우 우리는 이 리스크를 예측 할 수 있게된다.
+하지만 우리는  $P_{X \times Y}$를 모르기 때문에, 정확한 $R(f)$ 를 구할 수 없다. 하지만, 주어진 데이터가 많은경우 우리는 이 리스크를 예측 할 수 있게된다.
 
 - ####  Strong Law of Large number.
   기대값이 $m$인 분포 $z$ 로부터 $i.i.d$하게 $z_1, z_2,...z_n$ 을 추출했다고 하면, 
