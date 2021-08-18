@@ -110,17 +110,10 @@ comments: true
 
 
   가 성립하고, $E[f^* (x-y)^2]=E[E[f^* (x-y)^2|x]]$  이므로(Law of Iterated Expectation), 
-  $f^*$ 
-  가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
+  $$ E[(f(x)-y)^2] \geq \int\limits E[f^* (x-y)^2|x] P(X=x)dx$$
 
-
-
-
-
-
-
-
-
+  이된다.
+  따라서, Bayesian Decison Function $ f^*=E[y|x] $ 가 된다.
 
 
 
