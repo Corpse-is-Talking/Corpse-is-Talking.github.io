@@ -141,8 +141,8 @@ comments: true
   $$ E[f^*(x-y)^2|x] <=E[(f(x)-y)^2|x] $$
 
 
-  가 성립하고, $ E[f^*(x-y)^2]=E[E[f^*(x-y)^2|x]] $ 이므로, 
-  $ f^* $ 가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
+  가 성립하고, $E[f^* (x-y)^2]=E[E[f^* (x-y)^2|x]]$ 이므로, 
+  $f^*$ 가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
 
 
 
