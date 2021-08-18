@@ -92,9 +92,19 @@ comments: true
   &=E[(f(x)-E[y|x])^2|x]+E[(E[y|x]-y)^2|x]+2E[(f(x)-E[y|x])(E[y|x]-y)|x] \\
   \end{aligned}
   $$
-  여기서 햇갈릴 만한 것을 잠깐 짚고 넘어가자면,  $E[y|x]$ 는 $x$ 에 관한 함수이고 , $E[E[y|x]] = E[y]$ 이다. 더해서, $\textcolor{red}{E[g(x)Y|X=x]=g(x)\times E[Y|X=x]} $
+  #
+  증명을 위해서 햇갈릴 만한 개념 세가지만 짚고 넘어가자  
+  - __$E[y|x]$ 는 $x$ 에 관한 함수이다.__
+
+  - __$E[E[y|x]] = E[y]$ 이다. (Law of Iterated Expectaion.)__
+  
+  - __${E[g(x)Y|X=x]=g(x)\times E[Y|X=x]}$ ($g(x)$ 를 상수취급 가능)__
+
+
   잘 와닿지 않는다면, [여기](https://www.youtube.com/watch?v=yDkm9AYaczk)를 참고해보자.
-  $E[y|x]$를 $x$에 관한함수 $g(x)$로 생각해보자. $g(x)=E[y|x]$ 문제를 다시써보면
+  
+  #
+  $g(x)=E[y|x]$ 라고 하자. 문제를 다시써보면
 
   $$
   \begin{aligned}
@@ -128,7 +138,7 @@ comments: true
 
 
   가 성립하고, $ E[f^*(x-y)^2]=E[E[f^*(x-y)^2|x]] $ 이므로, 
-  $f^*$가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
+  $ f^* $ 가 trivial 하게, Empirical Risk $E[(f(x)-y)^2]$ 을 최소화시켜주는 Decision Function이라고 할 수 있다.
 
 
 
