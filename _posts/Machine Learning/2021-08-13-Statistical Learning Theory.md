@@ -100,7 +100,7 @@ comments: true
   1. $E[y|x]$ 는
    $x$ 에 관한 함수이다.
 
-  2. $E[E[y|x]]=E[y] $ 이다. (Law of Iterated Expectaion.)
+  2. $E[E[y|x]]=E[y]$  이다. (Law of Iterated Expectaion.)
   
   3. $E[g(x)Y|X=x]=g(x) \times E[Y|X=x]$ 
   ($g(x)$ 를 상수취급 가능 )
@@ -110,7 +110,7 @@ comments: true
   
 
 
-  $g(x)=E[y|x]$ 라고 하자. 문제를 다시써보면
+  $ g(x)=E[y|x] $   라고 하자. 문제를 다시써보면
 
   $$
   \begin{aligned}
