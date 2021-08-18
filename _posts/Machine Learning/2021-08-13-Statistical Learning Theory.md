@@ -108,13 +108,17 @@ comments: true
   $$ E[f^*(x-y)^2|x] <=E[(f(x)-y)^2|x] $$
 
 
-  가 성립하고, $$E[(f^* (x)-y)^2]=E[E[(f^* (x)-y)^2|x]]$$  이므로(Law of Iterated Expectation),
+  가 성립하고, 
+  $$E[(f^* (x)-y)^2]=E[E[(f^* (x)-y)^2|x]]$$  
+  이므로(Law of Iterated Expectation),
 
 
   $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx\geq\int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
 
 
-  따라서, Bayesian Decison Function $f^*=E[y|x]$ 가 된다.
+  따라서, Bayesian Decison Function
+  $f^*=E[y|x]$
+   가 된다.
 
 
 
