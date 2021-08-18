@@ -92,7 +92,9 @@ comments: true
   &=E[(f(x)-E[y|x])^2|x]+E[(E[y|x]-y)^2|x]+2E[(f(x)-E[y|x])(E[y|x]-y)|x] \\
   \end{aligned}
   $$
+
   #
+
   증명을 위해서 햇갈릴 만한 개념 세가지만 짚고 넘어가자  
   - __$E[y|x]$ 는 $x$ 에 관한 함수이다.__
 
@@ -104,6 +106,7 @@ comments: true
   잘 와닿지 않는다면, [여기](https://www.youtube.com/watch?v=yDkm9AYaczk)를 참고해보자.
   
   #
+  
   $g(x)=E[y|x]$ 라고 하자. 문제를 다시써보면
 
   $$
