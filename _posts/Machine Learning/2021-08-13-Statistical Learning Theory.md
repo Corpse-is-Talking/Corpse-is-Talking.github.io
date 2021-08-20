@@ -90,7 +90,7 @@ comments: true
   \end{aligned}
   $$
   
-  이다. 결국 이 문제는 i에 대해서
+  이다. 결국 이 문제는
   $P(f(x) \neq Y)$ 를 최소화하는 문제로 바뀌고, 이는 다시쓰면 각각의 category에 대하여
 
   $$ P(f(x) = Y)$$
