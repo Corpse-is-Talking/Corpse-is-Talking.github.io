@@ -178,18 +178,6 @@ comments: true
   $f^*=E[y|x]$ 이다.
   사실, Expected Risk를 적분형태로 표현해서, 미분을통해 구하는 방법이 훨씬 간단한지만, 강의에서는 이 방법을 사용했다.
 
-- #### Least Square Loss and Variance
-  앞서 구한대로, $f^*=E[y|x]$ 이고, Conditional Risk 식에 다시 대입해보면,
-   
-   $$ E[(f^*(x)-y)^2|x] =E[(E[Y|X]-Y)^2|x]=Var[Y|X] $$
-  
-  
-  즉, Least Square loss 일때의 Conditional Risk는 분포 $ Y|X $ 의 분산과도 같다. 
-
-
-  
-
-
 
 
 
