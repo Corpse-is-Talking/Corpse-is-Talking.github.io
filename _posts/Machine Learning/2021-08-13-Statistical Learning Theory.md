@@ -81,12 +81,12 @@ comments: true
   
   $$l(a,Y)= 1(a\neq Y)$$
   으로 정의된다고 하자. (0 if a=Y else 1)
-  이 경우에 Optimal Decision Rule 을 결정해보자.  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 0-1 loss 의 Conditional Risk를 수식으로 표현해보면, i번째 카테고리가 결과값이라고 했을때
+  이 경우에 Optimal Decision Rule 을 결정해보자.  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 0-1 loss 의 Conditional Risk를 수식으로 표현해보면,
 
   $$
   \begin{aligned}
   r(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
-  &=  1-1(f(x)=y_i)P(y_i|x)\\
+  &=  1-\sum_{i=1}^{k} 1(f(x)=y_i)P(y_i|x)\\
   &= 1- P(\hat{y}|x)
   \end{aligned}
   $$
