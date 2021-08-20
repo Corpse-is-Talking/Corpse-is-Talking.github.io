@@ -176,7 +176,7 @@ comments: true
 
   따라서,주어진 데이터 $x$에 대하여 Optimal Decision Rule은 
   $f^*=E[y|x]$ 이다.
-  사실, Expected Risk를 적분형태로 표현해서, 미분을통해 구하는 방법이 훨씬 간단한지만, 강의에서는 이 방법을 사용했다.
+  사실, Expected Risk를 적분형태로 표현해서, 미분을통해 구하는 방법도 있지만, 강의에서는 이 방법을 사용했다.
 
 
 
