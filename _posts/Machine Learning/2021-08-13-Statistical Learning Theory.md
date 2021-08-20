@@ -86,16 +86,15 @@ comments: true
   $$
   \begin{aligned}
   r(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
-  &=  1-1(f(x)=y_i)P(y_i|x)
+  &=  1-1(f(x)=y_i)P(y_i|x)\\
+  &= 1- P(\hat{y}|x)
   \end{aligned}
   $$
   
-  이다. 결국 이 문제는
-  $P(f(x) \neq Y)$ 를 최소화하는 문제로 바뀌고, 이는 다시쓰면 각각의 category에 대하여
-
-  $$ P(f(x) = Y)$$
+  이다. ( $\hat{y}$ 는 $f$ 가 예측한 $y$ ) 결국 
+  주어진 $x$ 를 통해서 $y$ 를 구할 때 가장 가능성이 높은 $y$ 를 골라야 리스크가 최소화 된다는 얘기다.
   
-  를 최대화 하는 문제가 되고, decision rule 은 , 주어진 x에 대해서 가능한 y값들($y_1\ to \ y_k$ ) 중 가장 확률이 높은걸 고르는 것이 될 것이다.
+  즉, decision rule 은 , 주어진 $x$ 에 대해서 가능한 $y$ 값들($y_1\ to \ y_k$ ) 중 가장 확률이 높은걸 고르는 것이 될 것이다. 
   이를 수식으로 표현하면,
 
   $$ f^*=argmax_{y}p(Y=y|X=x)  $$
