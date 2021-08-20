@@ -45,8 +45,11 @@ comments: true
   Bayes decision function을 결정하는 과정을 살펴보자.
   데이터 x가 주어졌을때, y를 예측하는 함수가 $f$ 가 있다고 하자. 우리는 일반적으로 작은 리스크를 선호할 것이며, 리스크를 최소화하는 함수를 Bayesian Decision Function이라고 정의했다. 이를 수학적으로 나타내보자.
   데이터쌍 $(X,Y)$가 분포 $P(X,Y)$로부터 주어졌다고 하자, 기댓값의 정의로부터
+
   $$ r(f):= \int\int L(f(X),Y)p(X,Y)dX\ dY $$
-  즉 $f$ 에관한 함수 $f$ 를 최소화하는 문제이다. 이어서 이 $f$를결정하는 과정을 알아보자.
+  
+  즉 $f$ 에관한 함수 $f$ 를 최소화하는 문제이다. 이어서 optimal $f$를결정하는 과정을 알아보자.
+
 - #### Optimal Decision Rule
   Optimal Decision Rule: For each $X$ choose the prediction $f(X)$ that minimizes the conditional expected risk
   즉, 특정 데이터 쌍 $(X,Y)$가 주어졌을때, 주어진 $X$ 에관한 conditional risk 를 최소화하는 $f$가 optimal 이라는 것이다.
