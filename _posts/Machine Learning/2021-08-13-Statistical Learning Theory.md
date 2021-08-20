@@ -64,7 +64,7 @@ comments: true
   모든 함수 $f$에 대하여, 
 
   $$ r(f) \geq \int(\int L(f_{opt}(X),Y)p(Y|X)dY)P(X)dX $$
-  
+
   따라서 특정 데이터 $X$ 가주어졌을때 그 conditional risk 를 최소화하는 함수를 Optimal Decision Function혹은 Bayesian Decision function이라고 할 수 있다.
 
 
@@ -82,8 +82,8 @@ comments: true
 
   $$
   \begin{aligned}
-  R(f|x)&= \sum_{i=1}^{k} l(f(x)\neq y_i)P(y_i|x) \\
-  &=  1-\sum_{i=1}^{k} l(f(x)=y_i)P(y_i|x)
+  R(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
+  &=  1-\sum_{i=1}^{k} 1(f(x)=y_i)P(y_i|x)
   \end{aligned}
   $$
   
