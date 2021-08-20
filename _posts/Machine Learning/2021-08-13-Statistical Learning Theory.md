@@ -40,17 +40,64 @@ comments: true
 
   추가로, Decision function이 $f^*$(bayes decision function)일 때의 리스크 $R$을 __Bayes Risk__ 라고 한다.
 
+## 2. Decision Theory
+- #### Setting
+  Bayes decision function을 결정하는 과정을 살펴보자.
+  데이터 x가 주어졌을때, y를 예측하는 함수가 $f$ 가 있다고 하자. 우리는 일반적으로 작은 리스크를 선호할 것이며, 리스크를 최소화하는 함수를 Bayesian Decision Function이라고 정의했다. 이를 수학적으로 나타내보자.
+  데이터쌍 $(X,Y)$가 분포 $P(X,Y)$로부터 주어졌다고 하자, 기댓값의 정의로부터
+  $$ r(f):= \int\int L(f(X),Y)p(X,Y)dX\ dY $$
+  즉 $f$ 에관한 함수 $f$ 를 최소화하는 문제이다. 이어서 이 $f$를결정하는 과정을 알아보자.
+- #### Optimal Decision Rule
+  Optimal Decision Rule: For each $X$ choose the prediction $f(X)$ that minimizes the conditional expected risk
+  즉, 특정 데이터 쌍 $(X,Y)$가 주어졌을때, 주어진 $X$ 에관한 conditional risk 를 최소화하는 $f$가 optimal 이라는 것이다.
+  이를 수학적으로 표현해보면, 
+  $$ f_{opt}= argmin_f \int L(f,Y)p(Y|X)dY $$
+  여기서 적분이 한번만 되는 이유는 한 데이터 쌍에 대해서만 구하기 때문이고, Conditional Risk 를 최소화해야하기 때문에, Conditional Probability 가 주어졌다.
+  이런식으로 모든 데이터쌍에 대해, 각각의 $f_{opt}$ 를 구해주면, 우리가 원하는 Expected Risk가 최소화된다는것은 간단하게 증명 할 수 있다.
+  통계시간에 배우는 Bayesian 정리 로부터 $P(X,Y)=P(Y|X)P(X)$로 바꿔서 쓸 수 있고, 어떤 함수 $f$에 대해서, 
+  $$ r(f):= \int(\int L(f(X),Y)p(Y|X)dY)P(X)dX $$
+  로 쓸 수 있게 된다. 아까 정한 함수 $f_{opt}$ 에대하여, 가운데 괄호친 부분은 최소화 되고
+  모든 함수 $f$에 대하여, 
+  $$ r(f) \geq \int(\int L(f_{opt}(X),Y)p(Y|X)dY)P(X)dX $$
+  따라서 특정 데이터 $X$ 가주어졌을때 그 conditional risk 를 최소화하는 함수를 Optimal Decision Function혹은 Bayesian Decision function이라고 할 수 있다.
 
 
-## 2. Examples
+
+
+
+
+## 3. Examples
+- #### 0-1 Loss
+  분포 $P(X,Y)$ 가 주어지고 Y는 k개의  Discreteg한 category 로 분류된다고 하고($Y=y_{1},...,y_{k}$), Loss Function $l$은 
+  
+  $$l(a,Y)= 1(a\neq Y)$$
+  으로 정의된다고 하자. (0 if a=Y else 1)
+  이 경우에 Optimal Decision Rule 을 결정해보자.  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 0-1 loss 의 Conditional Risk를 수식으로 표현해보면
+
+  $$
+  \begin{aligned}
+  R(f|x)&= \sum_{i=1}^{k} l(f(x)\neq y_i)P(y_i|x) \\
+  &=  1-\sum_{i=1}^{k} l(f(x)=y_i)P(y_i|x)
+  \end{aligned}
+  $$
+  
+  이다. 여기서 loss function $l$ 은 $f(X) \neq Y$ 일때만 count된다. 결국 이 문제는 i에 대해서
+  $P(f(x) \neq y_i)$ 를 최소화하는 문제로 바뀌고, 이는 다시쓰면
+
+  $$ P(f(x) = y_i)$$
+  
+  를최대화 하는 문제가 되고, 즉 $f$를 선정할 때, 주어진 x에 대해서 가능한 y값들(0 or 1) 중 가장 확률이 높은걸 고르는 게 decision rule이 될 것이다.
+  이를 수식으로 표현하면,
+
+  $$ f^*=argmax_{y}p(y|x)  $$
+
+
+
 
 - #### Least Square Regression.
   Loss function $l(a-y)=(a-y)^2$ 으로 정의된다고 하자. 
-  이 경우 우리는 가장 최적의 decision function $ f^* $ ,즉 Empirical Risk Minimizer 을 찾아야한다.
-  $f$ 에관한 함수 $R(f) =E[(f(x)-y)^2]$에대해서, $R(f)$를 최소화하는 $f$를 찾아보자.
-  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 수식으로 표현해보면,
-
-
+  이 경우에 Optimal Decision Rule을 결정해보자.
+  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, Squared loss 의 Conditional Risk를 수식으로 표현해보면,  
 
   $$
   \begin{aligned}
@@ -103,10 +150,10 @@ comments: true
   다시 위에수식으로 돌아가 이번엔 파란글씨부분을 살펴보자, 
   우리가 최소화하고자하는 함수 $E[(f(x)-y)^2|x]$는 $f$에 관한 함수이며,  $E[(g(x)-y)^2|x]$ 는 $f$에관한 항이 하나도 없으므로, 상수로 생각할 수 있다.  결국 $E[(f(x)-y)^2|x]$ 를 최소화하기 위해서는, $E[(f(x)-g(x))^2|x]$ 을 최소화 하는것이랑 같고,이를 최소화하기 위해서 $ f=g(x) $, 이어야하고, $f ^*=E[y|x ]$ 이된다.
 
-  하지만, 우리는 주어진 데이터 $ x $ 에 대하여  $ f^* $ 을 구한것이지, 모든 데이터에 대하여 성립하는 $ f^* $ 을 구한것은 아니다. 이를 조금만 더 일반화 시켜보면, 모든 x에 대하여, 
+  여기까지, 우리는 주어진 데이터 $ x $ 에 대하여  conditional risk를 최소화해주는 $ f^* $ 을 구했다. 
+  모든 데이터 x에 대해서, 각각의 Conditional Risk 를 최소화시켜주는 $f^*$가 존재할 것이며,   
 
   $$ E[(f^*(x)-y)^2|x] <=E[(f(x)-y)^2|x] $$
-
 
   가 성립하고, 
 
@@ -118,9 +165,11 @@ comments: true
   $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx\geq\int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
 
 
-  따라서, Bayesian Decison Function
-  $f^*=E[y|x]$
-   가 된다.
+  따라서,주어진 데이터 $x$에 대하여 Optimal Decision Rule은 
+  $f^*=E[y|x]$ 이다.
+  사실, Expeced Risk를 적분형태로 표현해서, 미분을통해 구하는 방법이 훨씬 간단한지만, 강의에서는 이 방법을 사용했다.
+
+  
 
 
 
