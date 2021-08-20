@@ -51,14 +51,20 @@ comments: true
   Optimal Decision Rule: For each $X$ choose the prediction $f(X)$ that minimizes the conditional expected risk
   즉, 특정 데이터 쌍 $(X,Y)$가 주어졌을때, 주어진 $X$ 에관한 conditional risk 를 최소화하는 $f$가 optimal 이라는 것이다.
   이를 수학적으로 표현해보면, 
+
   $$ f_{opt}= argmin_f \int L(f,Y)p(Y|X)dY $$
+
   여기서 적분이 한번만 되는 이유는 한 데이터 쌍에 대해서만 구하기 때문이고, Conditional Risk 를 최소화해야하기 때문에, Conditional Probability 가 주어졌다.
   이런식으로 모든 데이터쌍에 대해, 각각의 $f_{opt}$ 를 구해주면, 우리가 원하는 Expected Risk가 최소화된다는것은 간단하게 증명 할 수 있다.
   통계시간에 배우는 Bayesian 정리 로부터 $P(X,Y)=P(Y|X)P(X)$로 바꿔서 쓸 수 있고, 어떤 함수 $f$에 대해서, 
+
   $$ r(f):= \int(\int L(f(X),Y)p(Y|X)dY)P(X)dX $$
+
   로 쓸 수 있게 된다. 아까 정한 함수 $f_{opt}$ 에대하여, 가운데 괄호친 부분은 최소화 되고
   모든 함수 $f$에 대하여, 
+
   $$ r(f) \geq \int(\int L(f_{opt}(X),Y)p(Y|X)dY)P(X)dX $$
+  
   따라서 특정 데이터 $X$ 가주어졌을때 그 conditional risk 를 최소화하는 함수를 Optimal Decision Function혹은 Bayesian Decision function이라고 할 수 있다.
 
 
@@ -86,7 +92,7 @@ comments: true
 
   $$ P(f(x) = y_i)$$
   
-  를최대화 하는 문제가 되고, 즉 $f$를 선정할 때, 주어진 x에 대해서 가능한 y값들(0 or 1) 중 가장 확률이 높은걸 고르는 게 decision rule이 될 것이다.
+  를최대화 하는 문제가 되고, 즉 $f$를 선정할 때, 주어진 x에 대해서 가능한 y값들(0 to k) 중 가장 확률이 높은걸 고르는 게 decision rule이 될 것이다.
   이를 수식으로 표현하면,
 
   $$ f^*=argmax_{y}p(y|x)  $$
