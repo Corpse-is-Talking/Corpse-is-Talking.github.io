@@ -85,7 +85,7 @@ comments: true
 
   $$
   \begin{aligned}
-  R(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
+  r(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
   &=  1-1(f(x)=y_i)P(y_i|x)
   \end{aligned}
   $$
@@ -95,7 +95,7 @@ comments: true
 
   $$ P(f(x) = Y)$$
   
-  를 최대화 하는 문제가 되고, decision rule 은 , 주어진 x에 대해서 가능한 y값들($y_1 to y_k$ ) 중 가장 확률이 높은걸 고르는 것이 될 것이다.
+  를 최대화 하는 문제가 되고, decision rule 은 , 주어진 x에 대해서 가능한 y값들($y_1\ to \ y_k$ ) 중 가장 확률이 높은걸 고르는 것이 될 것이다.
   이를 수식으로 표현하면,
 
   $$ f^*=argmax_{y}p(Y=y|X=x)  $$
