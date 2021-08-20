@@ -81,24 +81,24 @@ comments: true
   
   $$l(a,Y)= 1(a\neq Y)$$
   으로 정의된다고 하자. (0 if a=Y else 1)
-  이 경우에 Optimal Decision Rule 을 결정해보자.  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 0-1 loss 의 Conditional Risk를 수식으로 표현해보면
+  이 경우에 Optimal Decision Rule 을 결정해보자.  데이터 $x$ 가 주어진다면, 그의 결과 $y$는 분포 $y|x$ 로부터 주어지고, 0-1 loss 의 Conditional Risk를 수식으로 표현해보면, i번째 카테고리가 결과값이라고 했을때
 
   $$
   \begin{aligned}
   R(f|x)&= \sum_{i=1}^{k} 1(f(x)\neq y_i)P(y_i|x) \\
-  &=  1-\sum_{i=1}^{k} 1(f(x)=y_i)P(y_i|x)
+  &=  1-1(f(x)=y_i)P(y_i|x)
   \end{aligned}
   $$
   
-  이다. 여기서 loss function $l$ 은 $f(X) \neq Y$ 일때만 count된다. 결국 이 문제는 i에 대해서
-  $P(f(x) \neq y_i)$ 를 최소화하는 문제로 바뀌고, 이는 다시쓰면
+  이다. 결국 이 문제는 i에 대해서
+  $P(f(x) \neq Y)$ 를 최소화하는 문제로 바뀌고, 이는 다시쓰면 각각의 category에 대하여
 
-  $$ P(f(x) = y_i)$$
+  $$ P(f(x) = Y)$$
   
-  를최대화 하는 문제가 되고, 즉 $f$를 선정할 때, 주어진 x에 대해서 가능한 y값들(0 to k) 중 가장 확률이 높은걸 고르는 게 decision rule이 될 것이다.
+  를 최대화 하는 문제가 되고, 즉 decision rule 은 , 주어진 x에 대해서 가능한 y값들(0 to k) 중 가장 확률이 높은걸 고르는 것이 될 것이다.
   이를 수식으로 표현하면,
 
-  $$ f^*=argmax_{y}p(y|x)  $$
+  $$ f^*=argmax_{y}p(Y=y|X=x)  $$
 
 
 
@@ -171,12 +171,20 @@ comments: true
   이므로(Law of Iterated Expectation),
 
 
-  $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2] P(X=x)dx\geq\int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
+  $$ E[(f(x)-y)^2]=\int\limits E[(f(x)-y)^2|x] P(X=x)dx\geq\int\limits E[(f^* (x)-y)^2|x] P(X=x)dx$$
 
 
   따라서,주어진 데이터 $x$에 대하여 Optimal Decision Rule은 
   $f^*=E[y|x]$ 이다.
-  사실, Expeced Risk를 적분형태로 표현해서, 미분을통해 구하는 방법이 훨씬 간단한지만, 강의에서는 이 방법을 사용했다.
+  사실, Expected Risk를 적분형태로 표현해서, 미분을통해 구하는 방법이 훨씬 간단한지만, 강의에서는 이 방법을 사용했다.
+
+- #### Least Square Loss and Variance
+  앞서 구한대로, $f^*=E[y|x]$ 이고, Conditional Risk 식에 다시 대입해보면,
+   
+   $$ E[(f^*(x)-y)^2|x] =E[(E[Y|X]-Y)^2|x]=Var[Y|X] $$
+  
+  즉, Least Square loss 일때의 Conditional Risk는 $Y|X$ 의 분산과도 같다. 
+
 
   
 
