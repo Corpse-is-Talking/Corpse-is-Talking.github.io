@@ -183,7 +183,8 @@ comments: true
    
    $$ E[(f^*(x)-y)^2|x] =E[(E[Y|X]-Y)^2|x]=Var[Y|X] $$
   
-  즉, Least Square loss 일때의 Conditional Risk는 $Y|X$ 의 분산과도 같다. 
+  
+  즉, Least Square loss 일때의 Conditional Risk는 분포 $ Y|X $ 의 분산과도 같다. 
 
 
   
