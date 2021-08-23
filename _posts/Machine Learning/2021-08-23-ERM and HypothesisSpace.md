@@ -14,7 +14,7 @@ comments: true
 ---
 ## 0. Review
 지난포스트에서는 Risk, Bayesian Risk, Bayesian Decison function의 정의와, 그 적용 사례들을 살펴보았다. (0-1 loss and Squared-loss)
-하지만 지난 포스트에서 진행된 모든 사례들은 $P_{X \times Y}$ 가 어떤 분포인지 안다는 가정하에 진행하였다. 실제로는 이 $P_{X \times Y}$ 를 알 방법이 없기에, 우리는 지난포스트에서 구한데로, Bayesian Decision function을 구할 수 없게된다. 이런상황에선 어떻게 해야할까? 이를 해결하기위해 Empirical Risk Minimizer 개념이 도입되었다고한다. 
+하지만 지난 포스트에서 진행된 모든 사례들은 $P_{X \times Y}$ 가 어떤 분포인지 안다는 가정하에 진행하였다. 실제로는 이 $P_{X \times Y}$ 를 알 방법이 없기에, 우리는 지난포스트에서 구한 대로, Bayesian Decision function을 구할 수 없게된다. 이런상황에선 어떻게 해야할까? 이를 해결하기위해 Empirical Risk Minimizer 개념이 도입되었다고한다. 
 
 
 ## 1. Empirical Risk Minimizer.
