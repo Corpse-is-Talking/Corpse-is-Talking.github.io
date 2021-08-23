@@ -65,7 +65,7 @@ comments: true
 
     실제 $P_{X \times Y}$ 를 알고 있는 상황속에서 ERM을 구해보는 과정이다, $X$ 는 [0,1]에서 Uniform Distribution을 따르고, Y는 항상 1인 분포가있고, ERM을 위해 그중에서 데이터 3개를 추출했다고 하자, 
     ![image](https://user-images.githubusercontent.com/75593825/130395271-7b111cf3-dea7-4d5a-8070-11d80389c946.png)
-    여러개의 Empricial Risk 를 최소화하는 Decision Function이 존재 할 수 있고, 그중에 그림에서 제안한 함수같은 Decision Function을 고안했다고 해보자, 이 경우 Empirical Risk 는 최소화시키는데에 성공했지만, 실제 분포를 기준으로 보았을때, 오류투성이인 Decision Function이다.(x가 0.25,5, 0.75 가 아닐 경우에는 전부 틀린 예측값을 전달해준다.) 물론 데이터 수가 극단적으로 적은 상황이긴 하지만, 실제로 데이터가 많은 상황에 ERM에는 성과가 좋지만, 실제 데이터에는 성과가 나쁜, 위와같은 상황이 충분히 벌어질 수 있다고 한다. 
+    여러개의 Empricial Risk 를 최소화하는 Decision Function이 존재 할 수 있고, 그중에 그림에서 제안한 함수같은 Decision Function을 고안했다고 해보자, 이 경우 Empirical Risk 는 최소화시키는데에 성공했지만, 실제 분포를 기준으로 보았을때, 오류투성이인 Decision Function이다.(x가 0.25,5, 0.75 가 아닐 경우에는 전부 틀린 예측값을 전달해준다.) 물론 데이터 수가 극단적으로 적은 상황이긴 하지만, 실제로 데이터가 많은 상황에서도 ERM에는 성과가 좋지만, 실제 데이터에는 성과가 나쁜, 위와같은 상황이 충분히 벌어질 수 있다고 한다. 
 
 
 - #### Constrained ERM
