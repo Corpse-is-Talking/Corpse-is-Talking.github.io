@@ -80,6 +80,7 @@ comments: true
 
 
 ## 3. 참고 문서
-[Introduction to Statistical Learning theory Lecture Slide](https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02a.intro-stat-learning-theory.pdf)
+Introduction to Statistical Learning theory Lecture Slide, Bloomberg Edu
+(https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02a.intro-stat-learning-theory.pdf)
 
 
