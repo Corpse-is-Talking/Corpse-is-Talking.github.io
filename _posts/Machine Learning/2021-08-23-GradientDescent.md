@@ -55,6 +55,8 @@ comments: true
       Definition:    $\forall x_1,x_2\in X,\forall \alpha \in [0,1] $
       $$ f(\alpha x_1+(1−\alpha )x_2)≤\alpha f(x1)+(1−\alpha)f(x_2)) $$
       을 만족하면, $f$는 Convex function 이라고 한다. 기하학적으로는 그래프 상의 임의 의 두 점 x,y 에 대히서 x와 y를 잇는 선분을 그렸을 때,  이 선분은 __항상__ 그래프보다 크거나 같게 위치한다.
+
+
       ![image](https://user-images.githubusercontent.com/75593825/132164231-e4c316c7-a00a-4c0a-a112-eb4a6eb2088b.png) 
       [출처: 모두를 위한 Convex ](https://wikidocs.net/17206)
 
@@ -67,7 +69,9 @@ comments: true
   2. Lipshcitz continuous 
       
       Gradient Descent 문제에서, Lipschctiz Continous 조건이 필요한 이유는 수렴성의 여부 때문인데, 만약 Step size를 너무 크게 잡아버린다면, 아무리 Gradient Descent 를 반복해도, 원하는 값에 도달하지 못할 수가 있다. 
+
       ![image](https://user-images.githubusercontent.com/75593825/132165076-bf7fda6c-f6d8-43ea-9bb0-e50ff45e4de4.png)
+
       (왼쪽, Stepsize를 작게잡는 경우, 도달은 하지만 너무느림, 오른쪽그림, Stepsize를 크게잡은 경우 원하는 값에 도달을 못함)[출처](http://users.ece.utexas.edu/~cmcaram/EE381V_2012F/Lecture_4_Scribe_Notes.final.pdf)
       
       위 Lipschitz Continous의 정의는  적당한 Fixed Step size를 정했을 때, gradient descent 가 원하는 값에 수렴 하는것을 보장해준다. 증명은 [여기](http://users.ece.utexas.edu/~cmcaram/EE381V_2012F/Lecture_4_Scribe_Notes.final.pdf)
@@ -102,7 +106,16 @@ comments: true
 
     ![image](https://user-images.githubusercontent.com/75593825/132172606-51e2c312-d4bf-483e-ad64-f30177ad2e54.png)
 
-    백트래킹의 효율성은 나중에 코드와 함께 살펴보겠다.
+    백트래킹은 나중에 코드와 함께 더 살펴보겠다.
+
+  ## 4. 참고문헌
+  [모두를 위한 컨벡스 최적화](https://wikidocs.net/17206)
+
+  [Gradient Descent, Lecture note from utexas](http://users.ece.utexas.edu/~cmcaram/EE381V_2012F/Lecture_4_Scribe_Notes.final.pdf)
+
+  [Introduction to Statistical Learning Theory, Sgd lecture note](https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02b.SGD.pdf)
+
+
 
 
 
