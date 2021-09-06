@@ -107,8 +107,9 @@ comments: true
     ![image](https://user-images.githubusercontent.com/75593825/132172606-51e2c312-d4bf-483e-ad64-f30177ad2e54.png)
 
     백트래킹은 나중에 코드와 함께 더 살펴보겠다.
+    
 
-  ## 4. 참고문헌
+## 4. 참고문헌
   [모두를 위한 컨벡스 최적화](https://wikidocs.net/17206)
 
   [Gradient Descent, Lecture note from utexas](http://users.ece.utexas.edu/~cmcaram/EE381V_2012F/Lecture_4_Scribe_Notes.final.pdf)
