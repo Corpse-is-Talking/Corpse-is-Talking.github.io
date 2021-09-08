@@ -7,7 +7,7 @@ tags:
   - python
   - Industrial Engineering
   - Blog
-excerpt: Gradient Descent and Stochastic Gradient Descent
+excerpt: Gradient Descent and Backtracking Line Search
 use_math: true
 comments: true
 
