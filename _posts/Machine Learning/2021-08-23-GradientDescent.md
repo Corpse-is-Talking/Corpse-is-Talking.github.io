@@ -36,12 +36,16 @@ comments: true
 
     Until Convergence to local minumum, Repeat
 
-    $$ x_{n+1}= x_n-\gamma \nabla F(x_n) $$ 
+
+    $$x_{n+1}= x_n-\gamma \nabla F(x_n)$$ 
     
+
 
 
     ![image](https://user-images.githubusercontent.com/75593825/130398636-bee6cddf-0d78-4c93-b645-9dc9b6556228.png)
     [Gradient Descent 예시, 출처: 위키피디아](https://en.wikipedia.org/wiki/Gradient_descent){: width="30%" height="30%"}
+
+    
     그림과같이 Contour Line  (같은 F값을 가지는 X들의 집합 ,바깥쪽 원이 큰 값을 가짐)이 그려져 있고,초기점 $x_0$ 에서 시작하여 Iteration이 진행될수록 local minimum 에 도달해나가는 모습을 볼 수 있다.
 
 ## 2. Convergence Theroem for fixed step size..
@@ -125,7 +129,7 @@ comments: true
 
   $f$는 Convex 하므로, $\nabla f(x)^T\nabla x$ <0 따라서, [Linear Approximation](https://en.wikipedia.org/wiki/Linear_approximation)을 이용하면, $t$ 가 매우 작을 때
 
-  
+
   $$ f(x+t\nabla x )\approx f(x) +t\nabla f(x)^T \nabla x < f(x)+\alpha t \nabla f(x)^T \nabla x$$
   
   를 만족하는데, 이말은 t에 계속해서 $\beta$를 곱해 감소시키면($0<\beta<1$), t는 0에 근접하므로, 결국에는  $f(x+t\nabla x )$ 가
