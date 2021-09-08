@@ -48,11 +48,11 @@ comments: true
 
 ## 2. Convergence Theroem for fixed step size..
 
-- Definition:
+- __Definition__:
   ![image](https://user-images.githubusercontent.com/75593825/132162353-7e9b4f3f-10a2-40f1-8a9e-8d92a6e4a502.png)
   만약 $f$ 가 Convex, Differentiable, Lipschitz continuous with continuous with constant L을 만족 할 때, step size t를 1/L 보다 작게 해서 gradient descent 를 수행한다면, 결과값은 항상 수렴한다는것이다. 여기서 Convex 와 Lipshcitz continuous 에 대해서 더 자세히 살펴보자
 
-  1. Convex function
+  1. __Convex function__
 
       Definition:    $\forall x_1,x_2\in X,\forall \alpha \in [0,1] $
       $$ f(\alpha x_1+(1−\alpha )x_2)≤\alpha f(x1)+(1−\alpha)f(x_2)) $$
@@ -68,7 +68,7 @@ comments: true
       __Convex 함수의 Local minumum은  global minimum 이다.__, 만약 Strongly Convex 하다면(위의 Definition에서 부등호가 $\leq$ 가아니라 $<$ 이면 ) __Unique__ 하게 global minumum 이 존재한다.
       즉, 함수가 Convex 하다면, 함수의 최솟값이(유일하지는 않은) 존재 한다는 것이다. 
 
-  2. Lipshcitz continuous 
+  2. __Lipshcitz continuous__ 
       
       Gradient Descent 문제에서, Lipschctiz Continous 조건이 필요한 이유는 수렴성의 여부 때문인데, 만약 Step size를 너무 크게 잡아버린다면, 아무리 Gradient Descent 를 반복해도, 원하는 값에 도달하지 못할 수가 있다. 
 
@@ -91,7 +91,7 @@ comments: true
   
   Gradient Descent는 알고리즘을 그대로 이용하면 매우 느리다고 한다, 따라서 알고리즘에 조금씩 변화를 주면서 성능을 크게 향상시키는 여러가지 방법들이 있는데, 그 중에서 Backtracking Line Search 에 대해서 알아보겠다. 
 
- -  Definition:
+ -  __Definition__:
 
     Gradient Descent 의 Step 을 진행하면서, 만약 현재 점에서 다음 점으로 갈 때, 너무 많이 갔다고 판단되면, 되돌아오고, 아니면 그대로 진행해서 효율을 증가시켜주는 방법이다.
 
@@ -123,7 +123,7 @@ comments: true
 
 
 
-- Backtracking Termination :
+- __Backtracking Termination__ :
 
   $f$는 Convex 하므로, $\nabla f(x)^T\nabla x$ <0 따라서, [Linear Approximation](https://en.wikipedia.org/wiki/Linear_approximation)을 이용하면, $t$ 가 매우 작을 때
 
