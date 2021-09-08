@@ -13,7 +13,7 @@ comments: true
 
 ---
 ## 0. Review
-지난 포스트까지는 기본적인 Statistical Learning Theory의 Framework에 대해서 알아보았다. 이번 포스트부터는 이 프레임워크들을 이용해서,  ML에서 가장 많이 사용되는 방법 중하나인 Gradient Descent, 더나아가 Stochastic Gradient Descent 까지 알아보겠다.
+지난 포스트까지는 기본적인 Statistical Learning Theory의 Framework에 대해서 알아보았다. 이번 포스트부터는 이 프레임워크들을 이용해서,  ML에서 가장 많이 사용되는 방법 중하나인 Gradient Descent, 더나아가 Gradient descent의 효율을 높여주는 Backtracking Line search 까지 알아보겠다.
 
 ## 1. Gradient Descent
 
@@ -37,7 +37,7 @@ comments: true
     Until Convergence to local minumum, Repeat
 
     $$ x_{n+1}= x_n-\gamma \nabla F(x_n) $$ 
-    ,
+    
 
 
     ![image](https://user-images.githubusercontent.com/75593825/130398636-bee6cddf-0d78-4c93-b645-9dc9b6556228.png)
@@ -58,7 +58,7 @@ comments: true
 
 
       ![image](https://user-images.githubusercontent.com/75593825/132164231-e4c316c7-a00a-4c0a-a112-eb4a6eb2088b.png) 
-      [출처: 모두를 위한 Convex ](https://wikidocs.net/17206)
+      [출처: Convex Optimization, Stephen Voyd, Lieven Vandenberghe]
 
 
 
@@ -81,7 +81,7 @@ comments: true
 
 - #### Stop Condition
 
-  Wait until $\parallel \nabla f(x) \parallel_2 \ \leq \epsilon	$  for $\epsilon>0$ you choose. ( $\nabla f$=0 이라는 것은 local minimum 이라는 뜻이고, convex한 상황에서는 local min= global min 
+  Iterate until $\parallel \nabla f(x) \parallel_2 \ \leq \epsilon	$  for $\epsilon>0$ you choose. ( $\nabla f$=0 이라는 것은 local minimum 이라는 뜻이고, convex한 상황에서는 local min= global min 
   )	
   Step size를 너무 크게 잡아 수렴 하지 않을 것 같을 경우에는 멈추고, Step size 를 변경 혹은 Backtracking 등 다른 방법을 이용.
 
@@ -91,8 +91,9 @@ comments: true
 
  -  Definition:
 
-    Gradient Descent 의 Step 을 진행하면서, 만약 현재 점에서 다음 점으로 갈 때, 너무 많이 갔다고 판단되면, 되돌아오고, 아니면 그대로 진행하는 Convex 함수의 성질을 이용한 방법이다. 
-    ![image](https://user-images.githubusercontent.com/75593825/132169207-582ab76e-548c-4c9c-b51f-cfcf483b12df.png)[출처](https://wikidocs.net/18184)
+    Gradient Descent 의 Step 을 진행하면서, 만약 현재 점에서 다음 점으로 갈 때, 너무 많이 갔다고 판단되면, 되돌아오고, 아니면 그대로 진행해서 효율을 증가시켜주는 방법이다.
+    ![image](https://user-images.githubusercontent.com/75593825/132169207-582ab76e-548c-4c9c-b51f-cfcf483b12df.png)[출처: Convex Optimization, Stephen Voyd, Lieven Vandenberghe]
+
 
     이 사진에서 유의 깊게 봐야할것은 $\alpha$ 를 곱한 점선함수와, $f(x+t\Delta x)$ 이다. $f(x+t\Delta x)$는 원래 점 x에서 이동했을때의 함수값을 가리키는데 이 함수값의 위치에 따라서, Backtracking의 과정이 변한다. 
 
@@ -103,18 +104,37 @@ comments: true
     두번째 접선은 접선의 기울기에 $\alpha$를 곱해서 구한 직선인데,  $f(x+t\Delta x)$가 이 점선 보다 위에있으면, 많이갔다고 판단해서 Stepsize를 줄여 점선아래로 오게 만들고, 점선 아래에 있으면, 적당히 잘 갔다고 판단한다.
 
     알고리즘:
-
-    ![image](https://user-images.githubusercontent.com/75593825/132172606-51e2c312-d4bf-483e-ad64-f30177ad2e54.png)
-
-    백트래킹은 나중에 코드와 함께 더 살펴보겠다.
+    ![image](https://user-images.githubusercontent.com/75593825/132449982-3440f4e0-9c52-409d-9099-9eb0304ee226.png)
     
+    만약, t=1로 초기화하고, 이동했을 때의 함수값이 $\alpha$를 곱한 접선의 함수값보다 크다면( 위 그림에서 점선의 위치보다 높다면), $t=\beta t$ 를해주어, 이동하는 값을 줄이는 것이다. 그후 조건이 충족된다면(위 그림에서 점선의 위치보다 낮아진다면), Gradient descent를 한 step 진행시킨다.
+
+
+    ![image](https://user-images.githubusercontent.com/75593825/132451145-0970e873-ffa8-4058-bf83-6bff69279bd7.png)
+    
+    이후는 통상적인 Gradient Descent 와 똑같이 진행하면 된다. 원하는 t를 Backtracking Line Search 를 통해서 구하고, 위에서 언급했듯이 
+    $\parallel \nabla f(x) \parallel_2 \ \leq \epsilon	$ 이 될때까지 반복하면 된다. 
+
+
+
+
+- Backtracking Termination :
+
+  $f$는 Convex 하므로, $\nabla f(x)^T\nabla x$ <0 따라서, [Linear Approximation](https://en.wikipedia.org/wiki/Linear_approximation)을 이용하면, $t$ 가 매우 작을 때
+  $$ f(x+t\nabla x )\approx f(x) +t\nabla f(x)^T \nabla x < f(x)+\alpha t \nabla f(x)^T \nabla x$$
+  
+  를 만족하는데, 이말은 t에 계속해서 $\beta$를 곱해 감소시키면($0<\beta<1$), t는 0에 근접하므로, 결국에는  $f(x+t\nabla x )$ 가
+  $ f(x)+\alpha t \nabla f(x)^T \nabla x $ 보다 작아진다는 것이다. 
+
 
 ## 4. 참고문헌
-  [모두를 위한 컨벡스 최적화](https://wikidocs.net/17206)
+
+  Convex Optimization Chapter 9, Stephen Voyd, Lieven Vandenberghe
 
   [Gradient Descent, Lecture note from utexas](http://users.ece.utexas.edu/~cmcaram/EE381V_2012F/Lecture_4_Scribe_Notes.final.pdf)
 
   [Introduction to Statistical Learning Theory, Sgd lecture note](https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02b.SGD.pdf)
+
+  [모두를 위한 컨벡스 최적화](https://wikidocs.net/17052)
 
 
 
