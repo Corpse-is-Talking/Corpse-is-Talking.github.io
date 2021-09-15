@@ -1,5 +1,5 @@
 ---
-title: "[ML]5.Linear Least Square and ERM and minibatch Gradient descent"
+title: "[ML]5.ERM of Linear Least Square  and minibatch Gradient descent"
 categories:
   - MachineLearning
 tags:
@@ -117,7 +117,7 @@ $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1
         \vdots   \\
           {\partial\over\partial w_d}R_n
         \end{array}\right)=
-        2\times (X^Tw-Y)X^T= 2\times X
+        2\times X(X^Tw-Y)= 2\times X
         \left (\begin{array}{cc}
           w_{0}+w_1x_{1,1}\cdots w_dx_{1,d}-y_1 \\
           w_{0}+w_1x_{2,1}\cdots w_dx_{2,d}-y_2 \\
@@ -132,7 +132,7 @@ $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1
           {\partial^2\over\partial w_1}R_n \\
         \vdots   \\
           {\partial^2\over\partial w_d}R_n
-        \end{array}\right)=
+        \end{array}\right)=2
         \left (\begin{array}{cc}
         \sum_{i=1}^{n}1^2 \\
         \sum_{i=1}^{n}x_{i,1}^2 \\
@@ -140,10 +140,68 @@ $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1
         \sum_{i=1}^{n}x_{i,d}^2
         \end{array}\right) \geq0
         $$
-        
+
         따라서, Empirical Risk는 Convex하고, Gradient Descent 를 적용 할 수 있다..
         
+## 3. MiniBatch Gradient Descent
 
+- __Definition__
+  일반적인 __Gradient Descent__ 를 실행 할 때에는 한개의 데이터 셋이 들어올때마다, Loss를 구하고, 업데이트 해준뒤 다음 Step으로 넘어가게 된다. 하지만 역시 데이터 전체를 건드려야하기 때문에 시간소요가 크다. 이를 보완하기 위해서, Loss를 전체 데이터에 대해서 구하지 않고, 전체 데이터를 여러개의 __minibatch__ 로 나누어서 구하는 방법을 __minibatch Gradient Descent__ 라고 한다. 이 방법을 사용하면, 수렴속도가 훨씬 빨라져, practical 한상황에서는 대부분 minibatch(about size=1~32)를 사용하고, 이 때 mini-batch 의 size가 1이라면, __stochastic gradient descent__ 라고 한다.
+
+
+- __Unbiasedness of Minibatch gradient descent__
+  통계시간에 배웠듯이, 모수 $\theta$를 추정한다고 할때, 가능하다면, __unbiased__ 를 만족하는 $\hat{\theta}$, 즉, $E[\hat{\theta}]=\theta$ 를 사용할 것이다.
+  Mini-batch를 사용할때, minibatch를 이용해서 구한 Loss function에 대한 gradient 값이 전체 데이터의 Loss function에 대한 gradient의 unbiased 한 estimate이 될 수 있는지 알아보자. 
+  
+  #
+  원래 n개의 데이터에서 구한 gradient 는
+  $$ \hat{R}_n(w)= \frac{1}{n} \sum_{i=1}^{n} \nabla _w l(f_w(x_{i},y_{i})) $$
+
+
+  여기서 n개의 데이터를 사이즈가 N인 batch M개로 만든다고 생각해보자
+  m번째 batch에 있는 데이터는
+  
+  $$ (x_{m1},y_{m1}),\dots(x_{mN},y_{mN})$$
+
+  이 minibiatch를 이용해 구한 gradient는
+
+  $$ \hat{R}_N(w)= \frac{1}{N} \sum_{i=1}^{N} \nabla _w l(f_w(x_{mi},y_{mi})) $$
+
+  이제 unbiased의 여부를 확인해보기위해서, 기댓값을 구해보면,
+
+  $$
+  \begin{align}
+  E[\hat{R}_N(w)]&= 
+  \frac{1}{N} \sum_{i=1}^{N} E[\nabla _w l(f_w(x_{mi},y_{mi}))]\\
+  &=  E[\nabla _w l(f_w(x_{m1},y_{m1}))]\\
+  &= \sum_{i=1}^n P(m_1=i)\nabla _w l(f_w(x_{i},y_{i}))\\
+  &=\frac{1}{n} \sum_{i=1}^n\nabla _w l(f_w(x_{i},y_{i})\\
+  &=\nabla \hat{R_n(w)}
+  \end{align}
+  $$
+
+  여기서 전제사항은, minibatch는 random하게 같은 확률로 선택된다는 것이다.(따라서 (1)~(4)의 전개가 가능하다)
+  즉 minibatch의 의 gradient는 full batch의 gradient의 __unbiased estimate__ 이 될 수가 있고, 이를 이용해 결과를 도출해내면 되는것이다.
+
+- __Efficieny__:
+  
+  Batch size N에 대하여
+
+  __N이 크다면__ , gradient의 예측값은 매우 좋지만, full batch와 같은 이유로, 수렴이 느려질 수 있다
+
+  __N이 작다면__ , gradient의 예측값은 불안정하지만, 데이터를 조금만 거쳐도 되기때문에, 수렴이 훨씬 빠르다.
+
+
+  __Recomendation :__ practical 한상황에서 N은 hyper parameter의 일종이며, 1~몇백 사이의 숫자가 가능하다.
+  Deep learning의 대가 중 한분인 Youshua Bengio 교수님은 약 N=32가 좋은 설정값이라고 하셨다고 한다.
+
+
+  다음포스트는 코드와 함께 Gradient, minibatch gradient, stochastic gradient의 차이를 알아보겠다.
+
+
+## 4. 참고문헌
+
+  [Introduction to Statistical Learning Theory, Sgd lecture note](https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/02b.SGD.pdf)
 
 
 
