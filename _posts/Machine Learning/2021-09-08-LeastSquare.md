@@ -153,7 +153,7 @@ $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1
   통계시간에 배웠듯이, 모수 $\theta$를 추정한다고 할때, 가능하다면, __unbiased__ 를 만족하는 $\hat{\theta}$, 즉, $E[\hat{\theta}]=\theta$ 를 사용할 것이다.
   Mini-batch를 사용할때, minibatch를 이용해서 구한 Loss function에 대한 gradient 값이 전체 데이터의 Loss function에 대한 gradient의 unbiased 한 estimate이 될 수 있는지 알아보자. 
   
-  #
+  
   원래 n개의 데이터에서 구한 gradient 는
   $$ \hat{R}_n(w)= \frac{1}{n} \sum_{i=1}^{n} \nabla _w l(f_w(x_{i},y_{i})) $$
 
