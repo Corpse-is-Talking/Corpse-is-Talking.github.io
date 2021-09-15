@@ -60,7 +60,7 @@ $$F =\{f:R^d \rightarrow R |f(x)=w^Tx+b, w\in R^d, b \in R\}$$
 
     $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 $$
 
-    좀더 알기 쉽게 행렬식을 통해서 표현하면..
+    이해하기 쉽게  행렬식을 풀어서 써보면..
 
 $$
     X^Tw-Y =
@@ -94,24 +94,56 @@ X^Tw-Y =
 \end{array}\right)
 $$
 
-
-
-
-
+$$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1}^{n}(w_0+w_1x_{i,1}+\cdots w_dx_{i,d}-y_i)^2$$
 
 
 
 - __Proof of Diffentiability and Convexity__
 
-    1. Diffentiability:
+    1. __Diffentiability__:
 
-        $\hat{R}_n(w)$은 단순히 미분가능한 1차함수의 합이므로, trivial하게 미분가능하다고 생각할 수 있다. 
+        $\hat{R}_n(w)$은 단순히 w에 대해서 미분가능한 1차함수의 제곱의 합이므로, trivial하게 미분가능하다고 생각할 수 있다. 
 
-    2. Convexity:
+    2. __Convexity__:
 
         Convex를 증명하는데는 여러가지 방법이 있지만, 
         그중에서 미분가능한 $f$ 에대해서,  $ \nabla ^2 f \geq 0 $ 이면 Convex임을  사용하겠다.
-        위에 Matrix Fp
+
+        $$
+        \nabla R_n =
+        \left (\begin{array}{cc}
+         {\partial\over\partial w_1}R_n \\
+          {\partial\over\partial w_2}R_n \\
+        \vdots   \\
+          {\partial\over\partial w_d}R_n
+        \end{array}\right)=
+        2\times (X^Tw-Y)X^T= 2\times X
+        \left (\begin{array}{cc}
+          w_{0}+w_1x_{1,1}\cdots w_dx_{1,d}-y_1 \\
+          w_{0}+w_1x_{2,1}\cdots w_dx_{2,d}-y_2 \\
+        \vdots   \\
+          w_{0}+w_1x_{n,1}\cdots w_dx_{n,d}-y_n
+        \end{array}\right)
+        $$
+
+        $$\nabla^2 R_n =
+        \left (\begin{array}{cc}
+         {\partial^2\over\partial w_0}R_n \\
+          {\partial^2\over\partial w_1}R_n \\
+        \vdots   \\
+          {\partial^2\over\partial w_d}R_n
+        \end{array}\right)=
+        \left (\begin{array}{cc}
+        \sum_{i=1}^{n}1^2 \\
+        \sum_{i=1}^{n}x_{i,1}^2 \\
+        \vdots \\
+        \sum_{i=1}^{n}x_{i,d}^2
+        \end{array}\right) \geq0
+        $$
+        
+        따라서, Empirical Risk는 Convex하고, Gradient Descent 를 적용 할 수 있다..
+        
+
 
 
 
