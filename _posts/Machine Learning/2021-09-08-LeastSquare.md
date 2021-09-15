@@ -45,8 +45,12 @@ $$F =\{f:R^d \rightarrow R |f(x)=w^Tx+b, w\in R^d, b \in R\}$$
     표현의 편의성을 위해 위식을 Matrix형태로 나타내보겠다. 이를위해 X,Y,W 의 차원을 각각설정해주면, 
 
     $ X: R^{(d+1) \times n}$
+
+    
     $ w: R^{(d+1) \times 1}$
+    
     $ Y: R^{n \times 1}$
+    
     여기서 $n$은 number of data , $d$는 number of features,$X$와 $w$에서 차원에 있는+1은 일차함수의 상수항을 위해서 표시해두었다. 
 
 
