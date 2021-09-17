@@ -1,5 +1,5 @@
 ---
-title: "[ML]5.ERM of Linear Least Square  and minibatch Gradient descent"
+title: "[ML]5. ERM of Linear Least Square  and minibatch Gradient descent"
 categories:
   - MachineLearning
 tags:
