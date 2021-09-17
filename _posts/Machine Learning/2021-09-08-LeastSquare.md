@@ -145,11 +145,11 @@ $$\hat{R}_n(w)=\frac{1}{n} \parallel X^Tw-Y \parallel ^2 = \frac{1}{n} \sum_{i=1
         
 ## 3. MiniBatch Gradient Descent
 
-- __Definition__
+- __Definition:__
   일반적인 __Gradient Descent__ 를 실행 할 때에는 한개의 데이터 셋이 들어올때마다, Loss를 구하고, 업데이트 해준뒤 다음 Step으로 넘어가게 된다. 하지만 역시 데이터 전체를 건드려야하기 때문에 시간소요가 크다. 이를 보완하기 위해서, Loss를 전체 데이터에 대해서 구하지 않고, 전체 데이터를 여러개의 __minibatch__ 로 나누어서 구하는 방법을 __minibatch Gradient Descent__ 라고 한다. 이 방법을 사용하면, 수렴속도가 훨씬 빨라져, practical 한상황에서는 대부분 minibatch(about size=1~32)를 사용하고, 이 때 mini-batch 의 size가 1이라면, __stochastic gradient descent__ 라고 한다.
 
 
-- __Unbiasedness of Minibatch gradient descent__
+- __Unbiasedness of Minibatch gradient descent:__
   통계시간에 배웠듯이, 모수 $\theta$를 추정한다고 할때, 가능하다면, __unbiased__ 를 만족하는 $\hat{\theta}$, 즉, $E[\hat{\theta}]=\theta$ 를 사용할 것이다.
   Mini-batch를 사용할때, minibatch를 이용해서 구한 Loss function에 대한 gradient 값이 전체 데이터의 Loss function에 대한 gradient의 unbiased 한 estimate이 될 수 있는지 알아보자. 
   
