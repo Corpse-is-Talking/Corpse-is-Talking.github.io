@@ -29,28 +29,47 @@ comments: true
 
  이를 Overfitting이라고 하고, Overfitting이 발생할 경우 Train Set의 Error가 낮게 나왔음에도, Test Set 에 대한 Error은 높게 형성되는 경우가 자주나옵니다. (Train error은 작지만 Test error이 크다는 것은 실제 데이터에 대한 예측력이 부족함을 나타냅니다). 
  
- 
  ## 3. Regularization
+
  이런 Overfitting을 줄여주기 위해 도입되는 것이 Regularization이라고 합니다. Regularization을 걸어주는 방법에는 제약식을 걸어주는 Ivanov의 방법과, loss function에 페널티를 더해주는 Tikhonov방법이 있다고 합니다.. 
 
  - __Ivanov Regularization:__
-함수 f가 있고 그 함수의 복잡도를 일정수준이하로 제약을 걸어주는 것입니다.
-(예를들어 f가 다항식이면 f의 최고차항계수를 r이하로 맞추는것)
+  함수 f가 있고 그 함수의 복잡도를 일정수준이하로 제약을 걸어주는 것입니다.
+  (예를들어 f가 다항식이면 f의 최고차항계수를 r이하로 맞추는것)
 
-![image](https://user-images.githubusercontent.com/75593825/137688117-ff5671e6-2b1f-4cf0-94f5-8f844bb680ad.png)
+    ![image](https://user-images.githubusercontent.com/75593825/137688117-ff5671e6-2b1f-4cf0-94f5-8f844bb680ad.png)
 
 - __Tikhonov Regularization:__
 함수가 특정 차수를 가지게 될경우 그경우의 복잡도와 $\lambda$를 곱해 페널티를 부여하는 것이다.
 
-![image](https://user-images.githubusercontent.com/75593825/137688287-680f784b-7273-4de4-9c44-5450461286b1.png)
+  ![image](https://user-images.githubusercontent.com/75593825/137688287-680f784b-7273-4de4-9c44-5450461286b1.png)
 
-대부분의 경우 이바노프와 티코노프의 방법의 결과값은 같게 도출된다고 하고, (이에대한 자세한 증명은 생략하겠습니다). 티코노브의 방법이 Unconstrained 되어있기 때문에 선호된다고 합니다. 
+  대부분의 경우 이바노프와 티코노프의 방법의 결과값은 같게 도출된다고 하고, (이에대한 자세한 증명은 생략하겠습니다). 티코노브의 방법이 Unconstrained 되어있기 때문에 선호된다고 합니다. 
 
-그럼이제 Tikhonov Regularization을 이용하여, L1과 L2 regularization의 차이를 알아보겠습니다. 
+그럼이제 Tikhonov Regularization을 이용하여,  L1과 L2 regularization의 차이를 알아보겠습니다. 
 
 - __L1 Regularization(Lasso Regression):__
+
+  ![image](https://user-images.githubusercontent.com/75593825/138661312-0efeb596-6b1a-45e2-901b-07cb3736339a.png)
+  Loss function으로 Squared loss function을 사용할때, L1 regularizaion을 적용했을때 구해지는 solution입니다.  뒤에 붙는 regularazation term 이 
+  $\|w\|$ 이기 때문에 L1이라고 부른다고 합니다.
+
+
+
 
 
 
 - __L2 Regularization(Ridge Regression):__
+
+
+  ![image](https://user-images.githubusercontent.com/75593825/138660644-31b435ea-4179-4461-803c-5e2b195aaa6e.png)
+
+  Loss function으로 Squared loss function을 사용할때, L2 regularizaion을 적용했을때 구해지는 solution입니다. 뒤에 붙는 regularazation term 이 
+  $\|w\|^{2}$ 이기 때문에 L2라고 부른다고 합니다.
+
+
+
+## 4. Sparsity of Lasso
+
+feature이 많을 경우, iteration을 진행하면 할 수록, overfitting을 방지하기 위해 필요없는 feature의 coefficient를 빠르게 0으로 수렴시키는 것이 좋을때가 있습니다. Lasso regression(L1 reg)는 Ridge regression(L2 reg)에 비해 feature 을 0으로 수렴시키는 경향이 매우 강합니다. 이런 경향을 Sparsity라고 부르고 왜 이런 성질을 가지냐에 대해서 간단하게 알아보겠습니다.
 
