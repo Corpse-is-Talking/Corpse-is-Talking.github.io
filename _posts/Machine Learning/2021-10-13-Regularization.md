@@ -51,6 +51,8 @@ comments: true
 - __L1 Regularization(Lasso Regression):__
 
   ![image](https://user-images.githubusercontent.com/75593825/138661312-0efeb596-6b1a-45e2-901b-07cb3736339a.png)
+
+  
   Loss function으로 Squared loss function을 사용할때, L1 regularizaion을 적용했을때 구해지는 solution입니다.  뒤에 붙는 regularazation term 이 
   $\|w\|$ 이기 때문에 L1이라고 부른다고 합니다.
 
