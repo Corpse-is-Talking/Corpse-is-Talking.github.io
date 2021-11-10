@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Corpse Is Talking"
+title                    : "StudyIE"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JJH"
@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "JJH"
-  avatar           : "/assets/Chitanda.jpg" #chitnada 
+  avatar           : "/assets/Myphoto.jpg" #chitnada 
   bio              : "Study record of IE and ML"
   location         : "Korea, Republic of"
   email            : jjjjunho1011@gmail.com
@@ -103,9 +103,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       #url: "https://mail.google.com/mail/u/0/?fs=1&to=jjjjunho1011@gmail.com&su=SUBJECT&body=BODY&tf=cm"
-    - label: "Personal Blog"
+    -#label: "Personal Blog"
       icon: "fas fa-fw fa-link"
-      url: "https://corpseistalking.tistory.com/"
+      #url: "https://corpseistalking.tistory.com/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
