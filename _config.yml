@@ -103,7 +103,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       #url: "https://mail.google.com/mail/u/0/?fs=1&to=jjjjunho1011@gmail.com&su=SUBJECT&body=BODY&tf=cm"
-    -#label: "Personal Blog"
+    - label: "Personal Blog"
       icon: "fas fa-fw fa-link"
       #url: "https://corpseistalking.tistory.com/"
     - label: "Twitter"
