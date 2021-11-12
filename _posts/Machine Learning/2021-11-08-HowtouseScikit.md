@@ -63,7 +63,7 @@ Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Min
 
 - __Test__ 
 
-간단한 X_train, X_test 데이터를 만들어 실험해봅시다.
+  간단한 X_train, X_test 데이터를 만들어 실험해봅시다.
 
   ```python
   X_train=[1,2,3,4,5,6,7,8,9,10]
