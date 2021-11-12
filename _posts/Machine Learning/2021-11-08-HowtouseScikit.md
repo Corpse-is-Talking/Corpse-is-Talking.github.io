@@ -85,8 +85,8 @@ Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Min
 
   ![image](https://user-images.githubusercontent.com/75593825/141426262-40592369-accb-40f1-8518-c843b07345aa.png)
 
-  이제는 X_train의 기준대로, X_test가 정의된 것을 볼 수 있습니다.
+  이제는 X_train의 기준대로, X_test가 regularized 된 것을 볼 수 있습니다.
 
 Scikit-learn 에서 제공하는 MinMaxScaler을 사용하면 훨씬 편리하게 Regularization을 진행할 수 있지만, Scikit-learn에 익숙해지기 위해 간단하게나마, 직접 한번 짜보았습니다
-다음포스트에서는 Ridge Regression을 직접 Class 를 만들어서 구현해보겠습니다.
+다음포스트에서는 Ridge Regression을 구현, 응용해보겠습니다.
 
