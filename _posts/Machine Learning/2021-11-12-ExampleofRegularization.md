@@ -1,5 +1,5 @@
 ---
-title: "[ML]8. Implementaion of regularization and Coordinate Descent Method"
+title: "[ML]9. Implementaion of regularization and Coordinate Descent Method"
 categories:
   - MachineLearning
 tags:

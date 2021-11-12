@@ -62,6 +62,7 @@ Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Min
   저는 fit 함수에 특정 데이터 X의 max와 min을 구할 수 있도록 구현하였고, transform 함수에서는 fit에서 구한 X의 max와 min을 바탕으로, regularization을 시행해줍니다.
 
 - __Test__ 
+
 간단한 X_train, X_test 데이터를 만들어 실험해봅시다.
 
   ```python
