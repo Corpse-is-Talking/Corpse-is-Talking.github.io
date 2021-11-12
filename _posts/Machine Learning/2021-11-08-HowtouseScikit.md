@@ -1,5 +1,5 @@
 ---
-title: "[ML]8.How to Use Scikit"
+title: "[ML]8.Scikit 사용법"
 categories:
   - MachineLearning
 tags:
