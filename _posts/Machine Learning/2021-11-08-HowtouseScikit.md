@@ -88,7 +88,7 @@ Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Min
   ```
   ![image](https://user-images.githubusercontent.com/75593825/141425552-723248c0-cb27-45fd-8310-84bb01a289ce.png)
   다음과 같은 결과가 나옵니다. 얼핏보면 원하는데로 나온 것 같지만(계산상의 문제는 없습니다) [이전 포스트](https://lookbackjh.github.io/machinelearning/Examples/)에서도 언급했던 대로, test set의 regularization은 train set의 regularization과 같은 기준을 사용해서 진행해야 합니다. 이를 위해서 
-  TransformerMixin 는 fit_transform 함수를 제공합니다. 이는 한번 정한 기준을 그대로 고정 시켜주고, 이후에 regularization을 진행할 때, 미리 정한 기준대로 실행합니다. 
+  TransformerMixin 는 fit_transform 함수를 제공합니다. 이는 한번 정한 기준을 그대로 고정 시켜주고, 이후에 regularization을 진행할 때, 미리 정한 기준대로 실행합니다.  
 
   ```python
   print("X_train_reg: {}".format(scale.fit_transform(X_train))) ## 결과 1
