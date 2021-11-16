@@ -13,7 +13,7 @@ comments: true
 ---
 
 ## 0. Overview
-scikit-learn은 데이터를 통해 수학적인 알고리즘을 적용할 때 매우 강력한 python library 입니다. 저도 공부하면서 어떻게 쓰는지 조금씩 알게되었기 때문에, 복습도 할겸 간단하게 이번 포스트와 다음포스트에 걸쳐서 사용법을 작성해보겠습니다. 내용은 scikit-learn 홈페이지[https://scikit-learn.org/stable/developers/develop.html]를 참고했습니다.
+scikit-learn은 데이터를 통해 수학적인 알고리즘을 적용할 때 매우 강력한 python library 입니다. 저도 공부하면서 어떻게 쓰는지 조금씩 알게되었기 때문에, 복습도 할겸 간단하게 이번 포스트와 다음포스트에 걸쳐서 사용법을 작성해보겠습니다. 내용은 [scikit-learn 홈페이지](https://scikit-learn.org/stable/developers/develop.html)를 참고했습니다.
 
 ## 1. Object of Scikit-learn
 Scikit-learn 을 사용하기 위해서는, 클래스를 만들어서 사용하게 되는데(혹은 built-in class), 클래스를 만들때는  주로 4가지를 구현해서 사용하게 됩니다.
@@ -32,7 +32,19 @@ Transformer은 , 데이터를 원하는식으로 조정하는데에 필요합니
 #### 4. Model
 새로운 데이터에 대해, 모델이 얼마나 잘 추정했는가를 점수로 표현해줍니다.
 
-## 2. Examples- MinmaxScaler 구현해보기
+
+## 2. 주의 사항 및 기초 function
+
+- Estimater 을 상속받은 Class 는 ```_init_()``` (생성자)를  포함해야 하며, ```_init_()``` 내부는 비어있어도 되고, parameter을 받아서 멤버변수를 정의해도 된다. 
+-  ```_init_()``` 각 멤버변수를 정의하는 역할을 하며 이 parameter은 ```_init_()``` <span style="color:red">에서 값이 변경 될 수 없다.</span>
+- 부모클래스(built-in class)인 BaseEstimater에서의 함수
+  - ```get_params()``` 는 ```_init_()```에서 정의한 멤버변수를 딕셔너리 형태로 불러올 수 있다. 이때 매개변수로는 ```deep=True 또는 false``` 를 받는데, ```deep=True``` 인 경우(default) 특정 객체를 매개변수로 받을 때, 그 객체의 멤버변수까지 불러온다.
+  - ```set_params()``` 는   ```_init_()```는 딕셔너리 형태를 매개변수로 받아서 멤버변수를 변경 할 수 있다
+
+
+
+
+## 3. Examples- MinmaxScaler 구현해보기
 
 Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Minmax scaler을 직접 만들어 봅시다.
 - __Code__
@@ -86,7 +98,78 @@ Jupyter Notebook을 통해 매우간단하게 1차원 array 에대한 Scikit Min
   ![image](https://user-images.githubusercontent.com/75593825/141426262-40592369-accb-40f1-8518-c843b07345aa.png)
 
   이제는 X_train의 기준대로, X_test가 regularized 된 것을 볼 수 있습니다.
+  Scikit-learn 에서 제공하는 MinMaxScaler을 사용하면 훨씬 편리하게 Regularization을 진행할 수 있지만, Scikit-learn에 익숙해지기 위해 간단하게나마, 직접 한번 짜보았습니다.
 
-Scikit-learn 에서 제공하는 MinMaxScaler을 사용하면 훨씬 편리하게 Regularization을 진행할 수 있지만, Scikit-learn에 익숙해지기 위해 간단하게나마, 직접 한번 짜보았습니다
-다음포스트에서는 Ridge Regression을 구현, 응용해보겠습니다.
+
+## 4. Examples- Ridge Regression 구현해보기
+아래에 있는 Ridge Regression 클래스는 제가 참고하고 있는, [Blommberg 강의의 HW2](https://bloomberg.github.io/foml/#resources)에 구현된 자료를 응용하였습니다.
+
+```python
+from sklearn.base import BaseEstimator, RegressorMixin
+from scipy.optimize import minimize, leastsq
+from setup_problem import *
+import numpy as np
+import pandas as pd
+from gradient import *
+class RidgeRegression(BaseEstimator, RegressorMixin):
+    """ ridge regression"""
+
+    def __init__(self, l2reg=1):
+        if l2reg < 0:
+            raise ValueError('Regularization penalty should be at least 0.')
+        self.l2reg = l2reg
+        self.w_=0
+
+    def fit(self, X, y=None):
+        n, num_ftrs = X.shape
+        # convert y to 1-dim array, in case we're given a column vector
+        y = y.reshape(-1)
+        def ridge_obj(w):
+            predictions = np.dot(X,w)
+            residual = y - predictions
+            empirical_risk = np.sum(residual**2) / n
+            l2_norm_squared = np.sum(w**2)
+            objective = empirical_risk + self.l2reg * l2_norm_squared
+            return objective
+        self.ridge_obj_ = ridge_obj
+
+        w_0 = np.random.rand(num_ftrs)
+        self.w_ = minimize(ridge_obj,w_0).x
+        return self
+
+    def predict(self, X, y=None):
+        try:
+            getattr(self, "w_")
+        except AttributeError:
+            raise RuntimeError("You must train classifer before predicting data!")
+        return np.dot(X, self.w_)
+
+    def score(self, X, y):
+        # Average square error
+        try:
+            getattr(self, "w_")
+        except AttributeError:
+            raise RuntimeError("You must train classifer before predicting data!")
+        y = y.reshape(-1)
+        residuals = self.predict(X) - y
+        return np.dot(residuals, residuals)/len(y)
+```
+
+- 위 예제와 같이 BaseEstimater을 상속받지만, 이번에는 Predict, Score에 대한 기능이 필요하기 때문에 RegressorMixin을 상속받습니다. RegressorMixin 은 score함수를 기본적으로 탑재하며, 기본적으로 score함수는 단순히 residual제곱의 sum으로 구현되어있지만, 사용자가  원하는 형태에 맞게끔 overriding 하면 됩니다. 숙제에서 주어진 자료에서는 average of residual sum으로 구현했습니다.
+
+- 위 예제에서의 fit 함수는 당연히 w_를 찾는 과정이고, loss function을 구현하고, ```minimize```함수를 통해서 w_를 찾습니다.
+  - ```minimize```의 사용 방법은 간단하게 ```minimize(loss_function,intial_theta)```이고, 더 자세한건 [여기](https://docs.scipy.org/doc/scipy/reference/optimize.html)를 참고하면 좋습니다.
+- ```predict``` 함수는 구한 w_에 대해서 새로운 데이터 X를 넣었을때, 예측되는 y값을 구해줍니다
+- ```score```함수는 구한 w_와 오차값의 차이를 의 합의 평균을 구해줍니다.
+
+
+
+
+간단하게 Y=X+3 인 데이터에 위 클래스를 적용해봅시다
+
+
+![image](https://user-images.githubusercontent.com/75593825/141935988-e770bed7-589f-464d-a32d-de28a97e9cdc.png)
+차례대로 예측한 모습입니다. 예측  Score도 제공해주는 모습을 볼 수 있습니다.
+
+
 

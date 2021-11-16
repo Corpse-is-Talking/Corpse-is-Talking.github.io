@@ -34,7 +34,8 @@ Loss function이 Square loss 일 경우에, Ridge Regression의 공식을 다시
 
 
 - __Example__
-  그럼 이 과정을 [이전 포스트](https://lookbackjh.github.io/machinelearning/Examples/) 에서 했던 데이터를 토대로 그대로 적용해봅시다. 이 때는 lambda_reg=0 으로 두고 Gradient 를 진행했지만, 이번에는 여러개의 lambda_reg 에 대한 성능이필요합니다. Code는 편의성을 위해, HW에서 제공해준 코드를응용하였습니다(SKlearn의 툴을 이용했습니다).
+
+  이번에는 HW에서 제공된 ridge_regression.py파일을 그대로 실행하였습니다.(굳이 새로 만들 필요가 없는 것 같아서...)
   
 
 
