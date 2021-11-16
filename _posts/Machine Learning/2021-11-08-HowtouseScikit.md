@@ -169,6 +169,8 @@ class RidgeRegression(BaseEstimator, RegressorMixin):
 
 
 ![image](https://user-images.githubusercontent.com/75593825/141935988-e770bed7-589f-464d-a32d-de28a97e9cdc.png)
+
+
 차례대로 예측한 모습입니다. 예측  Score도 제공해주는 모습을 볼 수 있습니다.
 
 
