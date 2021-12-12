@@ -30,7 +30,7 @@ $H_a$ :  $\mu_T>\mu_C$
 
 **Step 1:** 알파카를 두그룹으로 나눈다, 새로운 샴푸를 쓰는 그룹과, 기존 샴푸를 그대로 쓰는 경우로 나누어준다. (Treatment가 새로운 샴푸, Control이 기존 샴푸)
 
-![Untitled](PermutationTest/Untitled.png)
+![Untitled](./PermutationTest/Untitled.png)
 
 **Step 2**. :  Test Statistic을 정의한다.
 
@@ -38,13 +38,13 @@ Permutation test 에서 test  statistic의 설정은 매우 자유롭다.  t-tes
 
 $$Test \ Statistic =\mu_{Treatment}-\mu_{Control}$$
 
-![Untitled](PermutationTest/Untitled%201.png)
+![Untitled](./PermutationTest/Untitled%201.png)
 
 **Step 3**: Permutation(Randomization) 을 실행하여 섞어준다. (만약에 새로운 샴푸를 썼을때와 쓰지 않았을 때, 별 차이가 없다면, 섞어서 과정을 반복해도 별 차이가 없어야 함을 이용한다.)
 
 갑자기 섞는다는게 잘 받아들여지지 않을 수도 있지만, Control에있는 알파카들과 Treatment에 있는 알파카들을 랜덤하게 섞은 후 다시 두 그룹으로 나눈다. (이때는, 실제 어떤샴푸를 썼는지는 중요하지 않다. )  이 과정을 여러번 반복하고, 반복할 때마다, Test statistic을 측정한다.
 
-![Untitled](PermutationTest/Untitled%202.png)
+![Untitled](./PermutationTest/Untitled%202.png)
 
 과정을 수행한 후, 각 과정에서 나온 Test statistic을 히스토그램에 배치하면 위와같은 그림이 나올 것이다.  여기서 **Step 1** 에서 구한 Test statistic의 위치를 위 히스토그램에서 확인한다.
 
