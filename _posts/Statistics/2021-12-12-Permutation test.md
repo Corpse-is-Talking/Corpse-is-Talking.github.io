@@ -1,5 +1,5 @@
 ---
-title: "Permutation test"
+title: "[통계]1.Permutation test"
 categories:
   - Statistics
 tags:
@@ -9,7 +9,6 @@ comments: true
 
 ---
 
-# Permutation Test
 
 ### Overview:
 
