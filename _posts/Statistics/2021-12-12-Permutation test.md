@@ -36,7 +36,9 @@ $H_a$ :  $\mu_T>\mu_C$
 
 Permutation test 에서 test  statistic의 설정은 매우 자유롭다.  t-test나 z-test를 수행할 때의 test statistic을 사용해도 되지만, 간단하게, 두 집단간의 평균차를 Test statistic 으로 이용한다고 해보자. 
 
+
 $$Test \ Statistic =\mu_{Treatment}-\mu_{Control}$$
+
 
 ![Untitled](/assets/Image/PermutationTest/Untitled%201.png)
 
