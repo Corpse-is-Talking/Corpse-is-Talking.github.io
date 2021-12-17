@@ -14,7 +14,7 @@ comments: true
 
 두 집단 A,B 를 비교할 때, 가장 많이 사용되는 통계적 분석 방법에는 student T-test 가 있다. 
 
-하지만, t- test는 normality 의 assumption 하에서 분석이 진행되는데, 이 normality assumption은 매우 큰 가정이므로, 적절한 상황에서만 사용해야 한다. 하지만, 지금부터 이야기 할 Permutation test는 특별한 가정없이 어느 상황에서 사용할수 있는 강력한 통계적 기볍이다.
+하지만, t- test는 normality 의 assumption 하에서 분석이 진행되는데, 이 normality assumption은 매우 큰 가정이므로, 적절한 상황에서만 사용해야 한다. 하지만, 지금부터 이야기 할 Permutation test는 light한 가정([exchangeability](https://en.wikipedia.org/wiki/Exchangeable_random_variables)) 어느 상황에서 사용할수 있는 강력한 통계적 기볍이다.
 
 ### Example:
 
