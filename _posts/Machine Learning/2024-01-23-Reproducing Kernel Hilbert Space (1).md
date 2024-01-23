@@ -33,13 +33,13 @@ Norm~ Riesz representation Theorem
 
 ### **2.1 Norm**
 
-Let $F$ be a vector Space over $\R$. A function $||\cdot||_F : F-> [0,\infin]$ is said to be norm on $F$  if 
+Let $F$ be a vector Space over $\R$. A function $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
 
-1.  $||f||_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
+1.  ${\lVert f \rVert}_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
 2. $||\lambda f||_F=|\lambda||| f||_F$  (positive homogenity)
 3. $|| f+g||_F \leq || f||_F+|| g||_F$ (triangular inequality) 
 
-즉,  $F$라는 vector space에서 $||\cdot||_F : F-> [0,\infin]$ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
+즉,  $F$라는 vector space에서 $||\cdot||_F : F-> [0,\infty]$ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
 
 ### **2.2 Normed Vector Space**
 
@@ -51,14 +51,14 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
 
 - **Convergence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infin}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n \geq N, ||f_n-f||_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n \geq N, ||f_n-f||_F<\epsilon$
     
     (Vector space에서의 수렴을 정의한다는 것을 제외하면 수렴의 정의와 비슷하다)
     
 
 - **Cauchy sequence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infin}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n,m \geq N, ||f_n-f_m||_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n,m \geq N, ||f_n-f_m||_F<\epsilon$
     
     역시 Vectorspace에서의 Cauch 수열의 정의를 한 것이다. 
     
@@ -88,7 +88,7 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
     Complete space(Cauchy Sequence가 수렴) 를 정의함으로써,  다음과 같은 표현을 할 수 있게 된다. 
     
     $$
-    x(t)=\sum_{n=1}^{\infin}\alpha_n\psi_n(t)
+    x(t)=\sum_{n=1}^{\infty}\alpha_n\psi_n(t)
     $$
     
     즉 ,  space 에있는 특정 vector(function)을 무한개의 vector로 표현이 가능하다는 것인데, 이는 나중 포스트에서 다시 언급하도록 하겠습니다. 
@@ -171,7 +171,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
     We also define Boundedness
     
-    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $||A||<\infin$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
+    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $||A||<\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
     
 
 ### **2.8 Topological dual and Riesz Representation**
