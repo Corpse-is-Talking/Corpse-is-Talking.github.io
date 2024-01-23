@@ -33,11 +33,11 @@ Norm~ Riesz representation Theorem
 
 ### **2.1 Norm**
 
-Let $F$ be a vector Space over $\mathbb{R}$. A function $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
+Let $F$ be a vector Space over $\mathbb{R}$. A function $ {\lVert \cdot \mathbb{R}Vert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
 
-1.  ${\lVert f \rVert}_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
-2. ${\lVert \lambda f \rVert}_F={\vert \lambda \rvert} {\lVert f \rVert}_F$  (positive homogenity)
-3. ${\lVert f+g \rVert}_F \leq {\lVert f \rVert}_F+ {\lVert g \rVert}_F$ (triangular inequality) 
+1.  ${\lVert f \mathbb{R}Vert}_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
+2. ${\lVert \lambda f \mathbb{R}Vert}_F={\vert \lambda \mathbb{R}vert} {\lVert f \mathbb{R}Vert}_F$  (positive homogenity)
+3. ${\lVert f+g \mathbb{R}Vert}_F \leq {\lVert f \mathbb{R}Vert}_F+ {\lVert g \mathbb{R}Vert}_F$ (triangular inequality) 
 
 즉,  $F$라는 vector space에서 $||\cdot||_F : F-> [0,\infty]$ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
 
@@ -98,7 +98,7 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
 
 - **Inner product Space**
     
-    Let $F$ be a vector Space over $\R$. A function $<\cdot,\cdot>_F : F\times F-> \R$ is said to be inner product on $F$  if 
+    Let $F$ be a vector Space over $\mathbb{R}$. A function $<\cdot,\cdot>_F : F\times F-> \mathbb{R}$ is said to be inner product on $F$  if 
     
     1. $<\alpha_1f_1+ \alpha_2f_2,g>_F=\alpha_1<f_1,g>_F+\alpha_2<f_2,g>_F$
     2. $<f,g>_F=<g,f>_F$
@@ -136,7 +136,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
 
 - **Linear Operators**
     
-    A function $A:F \rightarrow G$ , where $F$ and $G$ are both normed linear spaces over $\R$ , is called  linear operator iff 
+    A function $A:F \mathbb{R}ightarrow G$ , where $F$ and $G$ are both normed linear spaces over $\mathbb{R}$ , is called  linear operator iff 
     
     1. Homogenity : $A(\alpha f)=\alpha(Af)$ for every $\alpha, f \in F$
     2. Additivity: $A(f+g)=Af+Ag \ f,g\in F$ 
@@ -145,7 +145,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
 - **Continuity**
     
-    A function $A:F\rightarrow G$ is said to be continuous at $f_0 \in F$ if for every $\epsilon>0$  there exist $\delta=\delta(\epsilon,f_0)>0$  s.t 
+    A function $A:F\mathbb{R}ightarrow G$ is said to be continuous at $f_0 \in F$ if for every $\epsilon>0$  there exist $\delta=\delta(\epsilon,f_0)>0$  s.t 
     
     $$
     ||f-f_0||_F<\delta \ \ \ implies \ \ \ ||Af-Af_0||_G<\epsilon
@@ -155,7 +155,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
 - **Lipschitz continuity**
     
-    A function $A:F\rightarrow G$ is said to be lipschitz continuous if for some $C$, s.t every $f_1,f_2 \in F, 
+    A function $A:F\mathbb{R}ightarrow G$ is said to be lipschitz continuous if for some $C$, s.t every $f_1,f_2 \in F, 
     ||Af_1-Af_2||_G \leq C||f_1-f_2||_F$
     
     It is clear that Lipschitz continuous → Uniform continuous($F$의 모든 instance에 대해서 연속)
@@ -171,16 +171,16 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
     We also define Boundedness
     
-    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $||A||<\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
+    The linear Operator $A:F\mathbb{R}ightarrow G$ is said to be a bounded operator if $||A||<\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
     
 
 ### **2.8 Topological dual and Riesz Representation**
 
 - **Topological Dual**
     
-    If $F$ is a normed space, then the space $F'$ of continuous linear functionals $A: F\rightarrow \R$ is called the topological dual space of $F$ 
+    If $F$ is a normed space, then the space $F'$ of continuous linear functionals $A: F\mathbb{R}ightarrow \mathbb{R}$ is called the topological dual space of $F$ 
     
-    즉, $F \rightarrow \R$ 로 mapping 해주는 모든 linear fucntionals 들로 이루어지는 공간을 $F$의 topological dual 이라고 한다. 
+    즉, $F \mathbb{R}ightarrow \mathbb{R}$ 로 mapping 해주는 모든 linear fucntionals 들로 이루어지는 공간을 $F$의 topological dual 이라고 한다. 
     
     *여기서 functionals 와 operator의 정의가 햇갈릴 수 있는데**, fucntionals는 벡터→ 스칼라, operatore은 벡터공간→ 벡터공간을 mapping**한다. 
     
