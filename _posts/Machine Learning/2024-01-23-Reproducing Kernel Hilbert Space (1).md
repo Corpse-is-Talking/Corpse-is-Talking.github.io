@@ -164,19 +164,19 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     We define Operator Norm as, 
     
     $$
-    ||A||=sup_{f\in F}\frac{||Af||_G}{||f||_F}
+    \lVert A \rVert =sup_{f\in F}\frac{ {\lVert Af \rVert}_G}{{\lVert f \rVert}_F}
     $$
     
     We also define Boundedness
     
-    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $||A||<\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
+    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $\lVert A\rVert <\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
     
 
 ### **2.8 Topological dual and Riesz Representation**
 
 - **Topological Dual**
     
-    If $F$ is a normed space, then the space $F'$ of continuous linear functionals $A: F\mathbb{R}ightarrow \mathbb{R}$ is called the topological dual space of $F$ 
+    If $F$ is a normed space, then the space $F'$ of continuous linear functionals $A: F\rightarrow \mathbb{R}$ is called the topological dual space of $F$ 
     
     즉, $F \rightarrow \mathbb{R}$ 로 mapping 해주는 모든 linear fucntionals 들로 이루어지는 공간을 $F$의 topological dual 이라고 한다. 
     
