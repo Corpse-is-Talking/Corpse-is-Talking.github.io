@@ -36,7 +36,7 @@ Norm~ Riesz representation Theorem
 Let $F$ be a vector Space over $\mathbb{R}$. A function $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
 
 1.  ${\lVert f \rVert}_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
-2. $ {\lVert \lambda f \rVert}_F=|\lambda| {\lVert f \rVert}_F$  (positive homogenity)
+2. ${\lVert \lambda f \rVert}_F={\vert \lambda \rvert} {\lVert f \rVert}_F$  (positive homogenity)
 3. ${\lVert f+g \rVert}_F \leq {\lVert f \rVert}_F+ {\lVert g \rVert}_F$ (triangular inequality) 
 
 즉,  $F$라는 vector space에서 $||\cdot||_F : F-> [0,\infty]$ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
