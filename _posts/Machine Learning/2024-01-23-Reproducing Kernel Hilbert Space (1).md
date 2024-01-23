@@ -39,7 +39,7 @@ Let $F$ be a vector Space over $\mathbb{R}$. A function $ {\lVert \cdot \rVert}_
 2. ${\lVert \lambda f \rVert}_F={\vert \lambda \rvert} {\lVert f \rVert}_F$  (positive homogenity)
 3. ${\lVert f+g \rVert}_F \leq {\lVert f \rVert}_F+ {\lVert g \rVert}_F$ (triangular inequality) 
 
-즉,  $F$라는 vector space에서 $ {\lVert \cdot \rVert}_F : F-> [0,\infty] $ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
+즉,  $F$ 라는 vector space에서 $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ 라는 function이 위 세가지를 만족하면서 정의 되면, function  $F$는 norm 이된다. 
 
 ### **2.2 Normed Vector Space**
 
