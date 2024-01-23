@@ -169,7 +169,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
     We also define Boundedness
     
-    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $\lVert A\rVert <\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
+    The linear Operator $A:F\rightarrow G$ is said to be a bounded operator if $\lVert A \rVert <\infty$ (위에서 정의한 linearoperator의 norm이 상한이 존재하면, Bounded operator이라고 한다. )
     
 
 ### **2.8 Topological dual and Riesz Representation**
