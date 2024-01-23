@@ -51,14 +51,14 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
 
 - **Convergence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n \geq N, {\lVert f_n-f \rVert}_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \mathbb{N},$ such that for all $n \geq N, {\lVert f_n-f \rVert}_F<\epsilon$
     
     (Vector space에서의 수렴을 정의한다는 것을 제외하면 수렴의 정의와 비슷하다)
     
 
 - **Cauchy sequence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n,m \geq N, {\lVert f_n-f_m \rVert}_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in  \mathbb{N},$ such that for all $n,m \geq N, {\lVert f_n-f_m \rVert}_F<\epsilon$
     
     역시 Vectorspace에서의 Cauch 수열의 정의를 한 것이다. 
     
