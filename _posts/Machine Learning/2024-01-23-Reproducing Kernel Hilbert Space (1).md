@@ -51,14 +51,14 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
 
 - **Convergence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n \geq N, ||f_n-f||_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to converge to $f \in F$ if for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n \geq N, {\lVert f_n-f \rVert}_F<\epsilon$
     
     (Vector space에서의 수렴을 정의한다는 것을 제외하면 수렴의 정의와 비슷하다)
     
 
 - **Cauchy sequence**
     
-    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n,m \geq N, ||f_n-f_m||_F<\epsilon$
+    A sequence of $\{ f_n\}_{n=1}^{\infty}$ of elements of a normed vector space  $F$ is said to be Cauchy if  for every $\epsilon>0,$  there exists $N=N(\epsilon) \in \N,$ such that for all $n,m \geq N, {\lVert f_n-f_m \rVert}_F<\epsilon$
     
     역시 Vectorspace에서의 Cauch 수열의 정의를 한 것이다. 
     
@@ -87,9 +87,7 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
     
     Complete space(Cauchy Sequence가 수렴) 를 정의함으로써,  다음과 같은 표현을 할 수 있게 된다. 
     
-    $$
-    x(t)=\sum_{n=1}^{\infty}\alpha_n\psi_n(t)
-    $$
+    $$x(t)=\sum_{n=1}^{\infty}\alpha_n\psi_n(t)$$
     
     즉 ,  space 에있는 특정 vector(function)을 무한개의 vector로 표현이 가능하다는 것인데, 이는 나중 포스트에서 다시 언급하도록 하겠습니다. 
     
