@@ -163,7 +163,7 @@ Hilbert Space의 정의를 위해서는 Boundedness와 Linear Operators(function
     
     We define Operator Norm as, 
     
-    $$\lVert A \rVert =sup_{f\in F}\frac{ {\lVert Af \rVert}_G}{{\lVert f \rVert}_F}$$
+    $$ \lVert A \rVert =sup_{f\in F}\frac{ {\lVert Af \rVert}_G}{ {\lVert f \rVert}_F }$$
     
     We also define Boundedness
     
