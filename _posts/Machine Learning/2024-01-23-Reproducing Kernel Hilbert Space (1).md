@@ -33,7 +33,7 @@ Norm~ Riesz representation Theorem
 
 ### **2.1 Norm**
 
-Let $F$ be a vector Space over $\R$. A function $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
+Let $F$ be a vector Space over $\mathbb{R}$. A function $ {\lVert \cdot \rVert}_F : F-> [0,\infty]$ is said to be norm on $F$  if 
 
 1.  ${\lVert f \rVert}_F =0$ if and only if $f=0$ (R 에서 정의된 vector space 에서 norm 이 0이면,  value 는 0이어야 한다.)
 2. $ {\lVert \lambda f \rVert}_F=|\lambda| {\lVert f \rVert}_F$  (positive homogenity)
