@@ -1,5 +1,5 @@
 ---
-title: "[ML]9.Reproducing kernel Hilbert Space (1)"
+title: "[ML]9.Reproducing kernel Hilbert Space (2)"
 categories:
   - MachineLearning
 tags:
@@ -29,13 +29,13 @@ $H$는 이제 $X$를 domain으로 받는 함수들의 집합을 나타내며, fo
 
 ### Evaluation Functional
 
-Let $H$ be a Hilbert space of functions $f:X\rightarrow \R$ , defined on a non-empty set $X$ . For a fixed $x \in X$,  map $\delta_x:H\rightarrow \R,$  $\delta_x:f\rightarrow f(x)$ is called evaluation functionals
+Let $H$ be a Hilbert space of functions $f:X\rightarrow \mathbb{R}$ , defined on a non-empty set $X$ . For a fixed $x \in X$,  map $\delta_x:H\rightarrow \R,$  $\delta_x:f\rightarrow f(x)$ is called evaluation functionals
 
 $X$의 원소들을 인자로 받는 function들로 구성된 Hilbert Space $H$ 에서 $f$에 $x$를 대입하는 행위를 evaluatioin functional이라고 한다. (이는 riesz representation theorem 에 의해서 다른 적절한 function과 내적하는 행위와도 같다. ) 
 
 ### Reproducing Kernel Hilbert Space
 
-A Hilbert space $H$ of functions $f: X \rightarrow \R$, defined on a non-empty set $X$ is said to be a reproducing kernel hilbert space if $\delta_x$ is continuous $\forall x \in X$
+A Hilbert space $H$ of functions $f: X \rightarrow \mathbb{R}$, defined on a non-empty set $X$ is said to be a reproducing kernel hilbert space if $\delta_x$ is continuous $\forall x \in X$
 
 사실 정의만 읽어보면 도대체 뭘 말하는건지 모르겠습니다.
 
@@ -45,7 +45,7 @@ A Hilbert space $H$ of functions $f: X \rightarrow \R$, defined on a non-empty s
 
 들어가기 전에, kernel도 function이다 라는 것을 항상 생각하면서 보면 도움이 됐던 것 같습니다.
 
-A function $k:X\times X \rightarrow \R$ is called a reproducing kernel iff  it satisfies 
+A function $k:X\times X \rightarrow \mathbb{R}$ is called a reproducing kernel iff  it satisfies 
 
 - $\forall x \in X, k(\cdot,x) \in H$
 - $\forall x \in X, \forall f  \in H, <f,k(\cdot,x)>_H=f(x)$
@@ -60,15 +60,15 @@ $k(x,y)=<k(\cdot,x), k(\cdot,y)>_H$
 
 **If reproducing kernels exists in hilbert space, it is unique.** 
 
-pf)
+pf
 
 Assume $H$ has two reproducing kernels $k_1$  and $k_2$. Then, 
 
 $$
-<f,k_1(\cdot,x)-k_2(\cdot,x)>_H=f(x)-f(x)=0 \ \forall f \in H , \forall x \in X
+<f,k_1(\cdot,x)-k_2(\cdot,x)>_H=f(x)-f(x)=0  \forall f \in H , \forall x \in X
 $$
 
-taking $f=k_1(\cdot,x)-k_2(\cdot,x)$, we obtain $||k_1(\cdot,x)-k_2(\cdot,x)||^2_{H}=0$
+taking $f=k_1(\cdot,x)-k_2(\cdot,x)$, we obtain ${\lVert k_1(\cdot,x)-k_2(\cdot,x) \rVert}^2_{H}=0$
 
 which in turn tells that $k_1=k_2$ and reproducing kernels are unique. 
 
@@ -76,7 +76,7 @@ which in turn tells that $k_1=k_2$ and reproducing kernels are unique.
 
 $**H$ is a reproducing kernel hilbert space if and only if $H$  has a reproducing kernel**
 
-pf) H has reproducing kernel→ H is RKHS
+pf H has reproducing kernel→ H is RKHS
 
 Given that a Hilbert Space $H$ has a reproducing kernel $k$ with the reproducing prorperty 
 
@@ -147,7 +147,7 @@ In Hilbert space with reproducing kernel  $k$ , take $\phi(x):x \rightarrow k(\c
 
 Let F be any  Hilbert Space, and $\phi: X \rightarrow F$. Then $h(x,y):=<\phi(x),\phi(y)>_F$ is a positive definite functions.
 
-Pf)
+Pf
 
 $$
 \begin{align}
