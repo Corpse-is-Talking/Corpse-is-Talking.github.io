@@ -7,7 +7,7 @@ tags:
   - python
   - Industrial Engineering
   - Blog
-excerpt: RKHS(1).
+excerpt: RKHS(1) From Definition of Space to Riesz Representation Theorem.
 use_math: true
 comments: true
 ---
@@ -20,6 +20,7 @@ comments: true
 잘 정리된 영문 자료를 참고하였고,   
 
 이번 포스트에서는 Normed Space, Inner Product Space, Cauchy Sequence, Completeness, Banach and Hilbert Space 를 정의하고,
+RKHS의 기반이 되는 Riesz Representation Theorem 까지 다뤄보겠습니다.
 
 다음 포스트부터는 RKHS의 정의 , 그 활용사례까지 차근차근정리해보도록 하겠습니다. 
 
