@@ -134,7 +134,7 @@ In Hilbert space with reproducing kernel  $k$ , take $\phi(x):x \rightarrow k(\c
 
 **Positive Definete Functions(kernels)**
 
-- A symmetric Function $h: X\times X \rightarrow \R$  is positive definite if $\forall n \geq1, \forall(a_1,\cdots,a_n) \in \R^n, \forall(x_1,\cdots,x_n) \in X^n$
+- A symmetric Function $h: X\times X \rightarrow \mathbb{R}$  is positive definite if $\forall n \geq1, \forall(a_1,\cdots,a_n) \in  \mathbb{R}^n, \forall(x_1,\cdots,x_n) \in X^n$
     
     $$
     \sum \sum a_ia_jh(x_i,x_j) \geq0
