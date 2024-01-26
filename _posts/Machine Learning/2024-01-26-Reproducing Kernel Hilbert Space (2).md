@@ -74,7 +74,7 @@ which in turn tells that $k_1=k_2$ and reproducing kernels are unique.
 
 **즉, $f$의 evaluation이 가능하게 하는 kernel이 힐베르트 공간 $H$에 unique하게 존재한다는 것입니다. (Riesze Representation Theorem에 의해 어떤 함수 g가 힐베르트 공간 $H$에 존재하는데 그 g가 unique하다는 것입니다.)**
 
-$**H$ is a reproducing kernel hilbert space if and only if $H$  has a reproducing kernel**
+**$H$ is a reproducing kernel hilbert space if and only if $H$  has a reproducing kernel**
 
 pf H has reproducing kernel→ H is RKHS
 
