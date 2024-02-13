@@ -11,7 +11,9 @@ excerpt: RKHS(2), Definition of RKHS.
 use_math: true
 comments: true
 ---
-# Reproducing Kernel Hilbert Space (2)
+
+
+## 개요
 
 저번 포스트에서는 RKHS를 정의하기 위한 기본적인 개념(공간에 대한 정의부터 Riesz Representation Therorem까지) 에대해 짚었습니다. 이번 포스트에서는 이 개념들을 잘 활용하여 Reproducing Kernel hilbert space에 대해 설명하고, 그 개념들을 몇가지 짚어보려고 합니다.
 
@@ -21,7 +23,7 @@ comments: true
 
 $H$는 이제 $X$를 domain으로 받는 함수들의 집합을 나타내며, for 모든 $x \in X$ 에 대해서, mapping 해주는 특별한 functional 이 $H$ 에 존재한다. 
 
-여기서 햇갈릴만한 부분이 있다면, function들의 집합 또한 vectorspace(사실 vectorspace이므로, function=vector이다.)를 구성할 수 있고 구성된 vector space에서 proper한 inner product를 정의 할 수 있다면, function들로 이루어진 Hilbert Space를 구성 할 수 있다.  
+여기서 햇갈릴만한 부분이 있다면, function들의 집합 또한 vectorspace(사실 vectorspace이므로, function=vector이다.)를 구성할 수 있고 구성된 vector space에서 proper한 inner product를 정의 할 수 있다면, function들로 이루어진 Hilbert Space를 구성 할 수 있습니다. RKHS는 항상 function들로 이루어진 공간이라는것을 명심해둡시다.   
 
 여기서 이전 포스트에서 다뤘던 Riesz Representation Theorem 에 대해서 다시 Remind해보겠습니다.
 
@@ -29,7 +31,7 @@ $H$는 이제 $X$를 domain으로 받는 함수들의 집합을 나타내며, fo
 
 ### Evaluation Functional
 
-Let $H$ be a Hilbert space of functions $f:X\rightarrow \mathbb{R}$ , defined on a non-empty set $X$ . For a fixed $x \in X$,  map $\delta_x:H\rightarrow \R,$  $\delta_x:f\rightarrow f(x)$ is called evaluation functionals
+Let $H$ be a Hilbert space of functions $f:X\rightarrow \mathbb{R}$ , defined on a non-empty set $X$ . For a fixed $x \in X$,  map $\delta_x:H\rightarrow \mathbb{R},$  $\delta_x:f\rightarrow f(x)$ is called evaluation functionals
 
 $X$의 원소들을 인자로 받는 function들로 구성된 Hilbert Space $H$ 에서 $f$에 $x$를 대입하는 행위를 evaluatioin functional이라고 한다. (이는 riesz representation theorem 에 의해서 다른 적절한 function과 내적하는 행위와도 같다. ) 
 
@@ -56,7 +58,7 @@ $k(x,y)=<k(\cdot,x), k(\cdot,y)>_H$
 
 즉 $f$의 evaulation functional과 같은 역할을 하는 kernel이 힐베르트 공간 $H$에 항상 Unique하게  존재한다는 것입니다.
 
-먼저 Reproducing Kernel의 Uniqueness 부터 증명해보자
+먼저 Reproducing Kernel의 Uniqueness 부터 증명해봅시다. 
 
 **If reproducing kernels exists in hilbert space, it is unique.** 
 
@@ -128,9 +130,7 @@ where we can define feature mapping as, $\phi(x)=x$  or $\phi(x)=[\frac{x}{\sqrt
 
 In Hilbert space with reproducing kernel  $k$ , take $\phi(x):x \rightarrow k(\cdot,x)$ 
 
-**Insight**
 
-여기서 얻을 수 있는 일종의 insight는 
 
 **Positive Definete Functions(kernels)**
 

@@ -11,7 +11,7 @@ excerpt: RKHS(1) From Definition of Space to Riesz Representation Theorem.
 use_math: true
 comments: true
 ---
-# Reproducing Kernel Hilbert Space (1)
+
 
 ## 1. 개요
 
@@ -84,14 +84,7 @@ Vector Space에서의 Convergence 와 Cauchy 수열을 새롭게 정의한다.
     
     (Complete Space Equipped with norm)
     
-- **Complete Space를 정의하는 이유**
-    
-    Complete space(Cauchy Sequence가 수렴) 를 정의함으로써,  다음과 같은 표현을 할 수 있게 된다. 
-    
-    $$x(t)=\sum_{n=1}^{\infty}\alpha_n\psi_n(t)$$
-    
-    즉 ,  space 에있는 특정 vector(function)을 무한개의 vector로 표현이 가능하다는 것인데, 이는 나중 포스트에서 다시 언급하도록 하겠습니다. 
-    
+
 
 ### **2.5 Inner Product Space**
 
