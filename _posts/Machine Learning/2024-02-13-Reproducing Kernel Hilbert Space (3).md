@@ -13,13 +13,13 @@ comments: true
 ---
 
 
+## 개요
+
 이번 포스트에서는 지난 포스트까지 정의한 원론적인 RKHS에 대해 더 자세히 들어가려고 합니다. 
 
 아마 위에 정의만으로는 그래서 도대체 이 RKHS가 뭔지 왜쓰는지 도대체 kernel은 왜 등장했는지 의문점을 가질 수 밖에 없다고 생각합니다.  그래서 이번 포스트에서는 RKHS(Reproducing Kernel Hilbert Space)를 구성하는 과정과  예시를 통해서 RKHS를 심층적으로 파보려고 합니다. 
 
-## 개요
-
- 그래서 이번포스트는, Moore Aroszjan Thorem과  RKHS의 몇가지 예시를 통해 그 실용성을 확인해보려고 합니다. 
+이번포스트의 구성은 Moore Aroszjan Thorem과  RKHS의 몇가지 예시를 통해 그 실용성을 확인하는 것으로 진행 될 것입니다. 
 
 ## Making Reproducing Kernel Hilbert Space
 
@@ -28,7 +28,7 @@ comments: true
 이를 증명하는 과정에서 저자는 다음과 같은 방법을 활용합니다. 
 
 - 특정 조건 두 가지가 성립하는 Hilbert Space $H_0$를 선언합니다.(Not RKHS,  but pre-RKHS, shoudl satisfy Inner product, Convergence of Cauchy Sequence in Norm )
-- 선언한 Hilbert Space $H_0$에서 , $\lim_{n\rightarrow \infin} f_n \rightarrow f$이 되도록 하는 임의의 Cauchy Sequence $f_n$을 만들고, 그리고 이 $f$로 이루어진 공간 $H$를 새롭게 정의합니다.
+- 선언한 Hilbert Space $H_0$에서 , $\lim_{n\rightarrow \infty} f_n \rightarrow f$이 되도록 하는 임의의 Cauchy Sequence $f_n$을 만들고, 그리고 이 $f$로 이루어진 공간 $H$를 새롭게 정의합니다.
 - H가 RKHS임을 증명합니다.
 
 이렇게 하는 이유는 다음과 같습니다. 
@@ -127,7 +127,7 @@ so $f_n$  converges to 0  in $\lVert \cdot \rVert_{H_0}.$  Thus, all the pre-RKH
 라는것을 확인해보면, 됩니다. Simply note that $f \in H$  and $f_n$ in $H_0$ converges to $f$ pointwise., 
 
 $$
-<f,k(\cdot,x)>_H=lim_{n\rightarrow \infin}f_n(x) =f(x)
+<f,k(\cdot,x)>_H=lim_{n\rightarrow \infty}f_n(x) =f(x)
 $$
 
 ## Examples
