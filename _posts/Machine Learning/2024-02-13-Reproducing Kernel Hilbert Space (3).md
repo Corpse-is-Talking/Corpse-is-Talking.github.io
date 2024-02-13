@@ -138,7 +138,7 @@ RKHS는 function들로이루어진 Space이고 function들간의 inner product�
 
 다음과 같은 bias가 없는 Hilbert Space $H$와 그에 해당하는 Inner product를 아래와 같이 정의해봅시다.
 
-$H=\{f: f_\beta(x)=\beta_1x_1 +\beta_2 x_2,\ \beta \in \R \}$
+$H=\{f: f_\beta(x)=\beta_1x_1 +\beta_2 x_2,\ \beta \in \mathbb{R} \}$
 
 $<f_\beta,f_\theta>=<\beta,\theta>=\beta_1\theta_1+\beta_2\theta_2$
 
@@ -156,7 +156,7 @@ $f_\beta(2,3)=\beta_1*2+ \beta_2*3$
 
 다음과 같은 bias가 없는 Hilbert Space $H$와 그에 해당하는 Inner product를 아래와 같이 정의해봅시다. (예시 1과 거의 같습니다. )
 
-$H=\{f: f_\beta(x)=\beta_1x_1 +\beta_2 x_2, \beta_3x_1x_2,  \ \beta \in \R \}$
+$H=\{f: f_\beta(x)=\beta_1x_1 +\beta_2 x_2, \beta_3x_1x_2,  \ \beta \in \mathbb{R} \}$
 
 $<f_\beta,f_\theta>=<\beta,\theta>=\beta_1\theta_1+\beta_2\theta_2$+$\beta_3\theta_3$
 
@@ -186,7 +186,8 @@ $$
 
 이문제에서 RKHS를 사용하는 것의 장점이 드러나는데, 두가지 변수 $x_1, x_2$를 사용하여, 상대적으로 고차원(위 문제에서는 interaction이 고려된 3차원)으로 mapping을 진행해줍니다. 이를 그림으로 표현하면 다음과 같습니다.
 
- <img src = "https://github.com/lookbackjh/pytorch_SEFS/assets/75593825/74f42e03-94d1-47f0-8530-6f3b9534e999.png" width="50%" height="50%">
+![Untitled](https://github.com/lookbackjh/EmbRec/assets/75593825/33dfefec-ea3e-4dc6-9c11-711b0cfc14ca)
+
 
 위사진에서 보면 알 수 있듯이 RKHS를 사용하는것의 매우 큰 장점을 알 수 있는데, 2차원에서는 linear하게 seperable하지 않지만, 3차원에서는 linear하게 seperable한 형태로 바뀐다는 것입니다. 
 
